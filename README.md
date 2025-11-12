@@ -1,6 +1,10 @@
+![Logo](https://raw.githubusercontent.com/janavipandole/Foodie/main/imgs/logo%20WOSC.svg)
+
 # FoodSaver - React Application
 
 A modern React application that connects restaurants with NGOs to reduce food waste and feed communities. This platform facilitates the donation of surplus food from restaurants to NGOs for distribution to those in need.
+
+<img src="https://github.com/Mayur-Pagote/README_Design_Kit/blob/730d340c8008758ac291ebc555f818f851feda0f/Assets/RGB%20Line%20Thick.gif" width="100%" />
 
 ## 🚀 Features
 
@@ -10,6 +14,8 @@ A modern React application that connects restaurants with NGOs to reduce food wa
 - **Multi-page Application**: Complete routing with dedicated pages for different user types
 - **Form Validation**: Client-side form validation with user feedback
 - **Accessibility**: ARIA labels and semantic HTML structure
+
+<img src="https://github.com/Mayur-Pagote/README_Design_Kit/blob/730d340c8008758ac291ebc555f818f851feda0f/Assets/RGB%20Line%20Thick.gif" width="100%" />
 
 ## 📋 Pages
 
@@ -21,6 +27,8 @@ A modern React application that connects restaurants with NGOs to reduce food wa
 - **Registration**: Organization registration form
 - **Contact**: Contact information and contact form
 
+<img src="https://github.com/Mayur-Pagote/README_Design_Kit/blob/730d340c8008758ac291ebc555f818f851feda0f/Assets/RGB%20Line%20Thick.gif" width="100%" />
+
 ## 🛠️ Technologies Used
 
 - **React 18**: Modern React with hooks and functional components
@@ -28,6 +36,8 @@ A modern React application that connects restaurants with NGOs to reduce food wa
 - **CSS3**: Custom styling with CSS variables and modern layout techniques
 - **JavaScript ES6+**: Modern JavaScript features
 - **HTML5**: Semantic HTML structure
+
+<img src="https://github.com/Mayur-Pagote/README_Design_Kit/blob/730d340c8008758ac291ebc555f818f851feda0f/Assets/RGB%20Line%20Thick.gif" width="100%" />
 
 ## 📦 Installation
 
@@ -46,6 +56,8 @@ A modern React application that connects restaurants with NGOs to reduce food wa
    ```bash
    npm start
    ```
+
+<img src="https://github.com/Mayur-Pagote/README_Design_Kit/blob/730d340c8008758ac291ebc555f818f851feda0f/Assets/RGB%20Line%20Thick.gif" width="100%" />
 
 4. **Open your browser** and navigate to `http://localhost:3000`
 
@@ -78,6 +90,8 @@ foodsaver-app/
 └── README.md           # Project documentation
 ```
 
+<img src="https://github.com/Mayur-Pagote/README_Design_Kit/blob/730d340c8008758ac291ebc555f818f851feda0f/Assets/RGB%20Line%20Thick.gif" width="100%" />
+
 ## 🎨 Design System
 
 ### Color Palette
@@ -93,6 +107,8 @@ foodsaver-app/
 - **Secondary Font**: Noto Sans
 - **Font Weights**: 400, 500, 700, 900
 
+<img src="https://github.com/Mayur-Pagote/README_Design_Kit/blob/730d340c8008758ac291ebc555f818f851feda0f/Assets/RGB%20Line%20Thick.gif" width="100%" />
+
 ## 🔧 Available Scripts
 
 - `npm start`: Runs the app in development mode
@@ -100,12 +116,17 @@ foodsaver-app/
 - `npm run build`: Builds the app for production
 - `npm run eject`: Ejects from Create React App (not recommended)
 
+<img src="https://github.com/Mayur-Pagote/README_Design_Kit/blob/730d340c8008758ac291ebc555f818f851feda0f/Assets/RGB%20Line%20Thick.gif" width="100%" />
+
 ## 📱 Responsive Design
 
 The application is fully responsive and works on:
 - Desktop (1200px+)
 - Tablet (768px - 1199px)
 - Mobile (320px - 767px)
+
+<img src="https://github.com/Mayur-Pagote/README_Design_Kit/blob/730d340c8008758ac291ebc555f818f851feda0f/Assets/RGB%20Line%20Thick.gif" width="100%" />
+
 
 ## 🌟 Key Features
 
@@ -127,6 +148,8 @@ Custom hook that creates a typewriter effect for dynamic text display on the hom
 - Loading states for form submissions
 - Responsive image galleries
 
+<img src="https://github.com/Mayur-Pagote/README_Design_Kit/blob/730d340c8008758ac291ebc555f818f851feda0f/Assets/RGB%20Line%20Thick.gif" width="100%" />
+
 ## 🚀 Deployment
 
 To deploy the application:
@@ -138,6 +161,8 @@ To deploy the application:
 
 2. **Deploy the `build` folder** to your hosting service (Netlify, Vercel, AWS, etc.)
 
+<img src="https://github.com/Mayur-Pagote/README_Design_Kit/blob/730d340c8008758ac291ebc555f818f851feda0f/Assets/RGB%20Line%20Thick.gif" width="100%" />
+
 ## 🤝 Contributing
 
 1. Fork the repository
@@ -146,9 +171,52 @@ To deploy the application:
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
+<img src="https://github.com/Mayur-Pagote/README_Design_Kit/blob/730d340c8008758ac291ebc555f818f851feda0f/Assets/RGB%20Line%20Thick.gif" width="100%" />
+
 ## 📄 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+<img src="https://github.com/Mayur-Pagote/README_Design_Kit/blob/730d340c8008758ac291ebc555f818f851feda0f/Assets/RGB%20Line%20Thick.gif" width="100%" />
+
+## 💬 Connect with the Maintainer
+
+👩‍💻 **Maintainer:** [@janavipandole](https://github.com/bidyutmaji)
+📧 **Contact:** Open an issue or connect via GitHub.
+
+<img src="https://github.com/Mayur-Pagote/README_Design_Kit/blob/730d340c8008758ac291ebc555f818f851feda0f/Assets/RGB%20Line%20Thick.gif" width="100%" />
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=90&section=header" width="100%"/>
+
+## Contributors
+
+<img src="https://contributors-img.web.app/image?repo=bidyut26maji/Foodie"/>
+
+<img src="https://github.com/Mayur-Pagote/README_Design_Kit/blob/45123f007c79aa8d0c8d9b11b3ff72d6bf4744c7/Assets/Star%20Light%20Line.gif" width="100%">
+
+## Stargazers
+
+<img src="https://reporoster.com/stars/dark/bidyut26maji/Foodie"/>
+
+<img src="https://github.com/Mayur-Pagote/README_Design_Kit/blob/45123f007c79aa8d0c8d9b11b3ff72d6bf4744c7/Assets/Star%20Light%20Line.gif" width="100%">
+
+## Forkers
+
+<img src="https://reporoster.com/forks/dark/bidyut26maji/Foodie"/>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient"/>
+
+
+## 🌟 Support the Project
+
+If you found this helpful:
+⭐ **Star** the repository
+🍴 **Fork** it to contribute
+📢 **Share** it with others
+
+> “Good food brings people together — so does open source.” 🍕💻
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=footer" width="100%"/>
+
 
 ## 📞 Support
 
