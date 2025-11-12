@@ -411,69 +411,108 @@ body {
   font-size: 1rem;
   flex-grow: 1;
 }
-
-/* Footer */
-.main-footer {
-  display: flex;
-  justify-content: center;
-  padding: 40px 20px;
-  background-color: var(--new2-color);
+/* Footer Base */
+.footer {
+  background: linear-gradient(135deg, #0a192f, #112240);
+  color: #fff;
+  padding: 60px 20px 20px;
+  font-family: "Poppins", sans-serif;
 }
 
-.footer-content {
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Footer Columns */
+.footer-column {
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  text-align: center;
-  max-width: 960px;
-  width: 100%;
+  gap: 15px;
 }
 
+.footer-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #00b894;
+  margin-bottom: 8px;
+}
+
+.footer-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #dfe6e9;
+}
+
+
 .footer-links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .footer-link {
   text-decoration: none;
-  color: var(--tertiary-color);
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  min-width: 160px;
+  color: #dfe6e9;
+  line-height: 1.5px;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
 }
 
-.social-icons {
+.footer-link:hover {
+  color: #00cec9;
+}
+
+
+.footer-socials {
   display: flex;
-  justify-content: center;
-  gap: 16px;
+  gap: 15px;
 }
 
 .social-icon {
-  color: var(--tertiary-color);
+  font-size: 1.5rem;
+  color: #dfe6e9;
+  transition: all 0.3s ease;
 }
 
-.copyright-text {
-  color: var(--tertiary-color);
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
+.social-icon:hover {
+  color: #00cec9;
+  transform: translateY(-3px);
 }
 
-.logos-container {
+/* Partner Logos */
+.footer-logos {
   display: flex;
-  gap: 20px;
   align-items: center;
-  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 .footer-logo {
-  height: 100px;
+  height: 50px;
   width: auto;
-  object-fit: contain;
+  filter: brightness(0.9);
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
+
+.footer-logo:hover {
+  transform: scale(1.05);
+  filter: brightness(1);
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.9rem;
+  color: #b2bec3;
+}
+
+
 
 /* Typewriter Animation */
 .typewriter {
@@ -525,6 +564,7 @@ body {
     padding: 20px 0;
   }
 }
+
 
 /* Navigation active state */
 .nav-link.active {
