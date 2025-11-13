@@ -582,3 +582,103 @@ body {
   opacity: 0;
   pointer-events: none;
 }
+
+
+/* Registration Page Hero Section Styles */
+.registration-hero {
+  width: 100%;
+  min-height: 50vh; /* Ensures sufficient vertical space */
+  background-image: url('https://images.unsplash.com/photo-1593113616641-2a6234b07c1b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* New hero image */
+  background-size: cover; /* Cover the entire area */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* For overlay positioning */
+  border-radius: 8px; /* Consistent border-radius */
+  overflow: hidden; /* Ensure border-radius applies to pseudo-elements */
+  margin-bottom: 40px; /* Space below the hero section */
+}
+
+/* Background overlay for text readability */
+.registration-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black overlay */
+  z-index: 1; /* Place below content */
+}
+
+/* Hero content wrapper */
+.hero-content {
+  position: relative; /* Ensure text is above the overlay */
+  z-index: 2;
+  text-align: center; /* Center align all text within */
+  color: #FFFFFF; /* Set default text color for all child text elements */
+  padding: 40px; /* Spacing around the text content */
+  max-width: 900px; /* Max width for content on larger screens */
+  width: 100%;
+}
+
+.hero-content h1 {
+  font-size: 3rem; /* Large font size for the main heading */
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Enhance readability */
+  margin-bottom: 15px; /* Space between heading and subheading */
+}
+
+.hero-content p {
+  font-size: 1.2rem; /* Font size for the subheading */
+  font-weight: 400;
+  line-height: 1.5;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Enhance readability */
+  max-width: 600px; /* Constrain paragraph width */
+  margin: 0 auto; /* Center the paragraph */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .registration-hero {
+    min-height: 40vh; /* Adjust height for tablets */
+  }
+
+  .hero-content {
+    padding: 25px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem; /* Adjust heading size */
+    margin-bottom: 10px;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem; /* Adjust subheading size */
+  }
+}
+
+@media (max-width: 480px) {
+  .registration-hero {
+    min-height: 30vh; /* Further adjust height for mobile */
+    border-radius: 0; /* Remove border-radius on small screens for edge-to-edge feel */
+  }
+
+  .hero-content {
+    padding: 15px;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem; /* Smaller heading for mobile */
+    margin-bottom: 8px;
+  }
+
+  .hero-content p {
+    font-size: 1rem; /* Smaller subheading for mobile */
+  }
+}
