@@ -62,43 +62,19 @@ const Registration = () => {
       </div>
 
       {/* Hero Section */}
-      <div
-        style={{
-          display: 'flex',
-          minHeight: '300px',
-          flexDirection: 'column',
-          gap: '24px',
-          backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          borderRadius: '8px',
-          alignItems: 'center',
-          justifyContent: 'center',
-          padding: '16px',
-          marginBottom: '40px'
-        }}
-      >
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', textAlign: 'center' }}>
-          <h1
-            style={{
-              color: 'white',
-              fontSize: '2.5rem',
-              fontWeight: '900',
-              lineHeight: '1.25',
-              letterSpacing: '-0.033em'
-            }}
-          >
+      <div className="registration-hero">
+        <div className="hero-content">
+          <h1>
             Join FoodSaver
           </h1>
-          <h2 style={{ color: 'white', fontSize: '1rem', fontWeight: '400', lineHeight: '1.5' }}>
+          <h2>
             Register your organization and start making a difference in your community.
           </h2>
         </div>
       </div>
 
       {/* Registration Form */}
-      <div style={{ padding: '0 16px', maxWidth: '800px', margin: '0 auto' }}>
+      <div style={{ padding: '0 16px', maxWidth: '800px', margin: '40px auto' }}>
         <div style={{
           padding: '32px',
           backgroundColor: '#f8fbfa',
@@ -214,7 +190,7 @@ const Registration = () => {
             </div>
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px', marginBottom: '24px' }}>
-              <div>
+               <div>
                 <label style={{ display: 'block', color: '#0e1a13', fontSize: '16px', fontWeight: '600', marginBottom: '8px' }}>
                   Phone Number *
                 </label>
@@ -259,138 +235,30 @@ const Registration = () => {
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '24px', marginBottom: '24px' }}>
               <div>
-                <label style={{ display: 'block', color: '#0e1a13', fontSize: '16px', fontWeight: '600', marginBottom: '8px' }}>
-                  City *
-                </label>
-                <input
-                  type="text"
-                  name="city"
-                  value={formData.city}
-                  onChange={handleInputChange}
-                  required
-                  style={{
-                    width: '100%',
-                    padding: '12px',
-                    border: '1px solid #daeded',
-                    borderRadius: '8px',
-                    fontSize: '16px'
-                  }}
-                  placeholder="Enter city"
-                />
+                <label style={{ display: 'block', color: '#0e1a13', fontSize: '16px', fontWeight: '600', marginBottom: '8px' }}>City *</label>
+                <input type="text" name="city" value={formData.city} onChange={handleInputChange} required placeholder="Enter city" style={{ width: '100%', padding: '12px', border: '1px solid #daeded', borderRadius: '8px', fontSize: '16px' }} />
               </div>
-
               <div>
-                <label style={{ display: 'block', color: '#0e1a13', fontSize: '16px', fontWeight: '600', marginBottom: '8px' }}>
-                  State *
-                </label>
-                <input
-                  type="text"
-                  name="state"
-                  value={formData.state}
-                  onChange={handleInputChange}
-                  required
-                  style={{
-                    width: '100%',
-                    padding: '12px',
-                    border: '1px solid #daeded',
-                    borderRadius: '8px',
-                    fontSize: '16px'
-                  }}
-                  placeholder="Enter state"
-                />
+                <label style={{ display: 'block', color: '#0e1a13', fontSize: '16px', fontWeight: '600', marginBottom: '8px' }}>State *</label>
+                <input type="text" name="state" value={formData.state} onChange={handleInputChange} required placeholder="Enter state" style={{ width: '100%', padding: '12px', border: '1px solid #daeded', borderRadius: '8px', fontSize: '16px' }} />
               </div>
-
               <div>
-                <label style={{ display: 'block', color: '#0e1a13', fontSize: '16px', fontWeight: '600', marginBottom: '8px' }}>
-                  ZIP Code *
-                </label>
-                <input
-                  type="text"
-                  name="zipCode"
-                  value={formData.zipCode}
-                  onChange={handleInputChange}
-                  required
-                  style={{
-                    width: '100%',
-                    padding: '12px',
-                    border: '1px solid #daeded',
-                    borderRadius: '8px',
-                    fontSize: '16px'
-                  }}
-                  placeholder="Enter ZIP code"
-                />
+                <label style={{ display: 'block', color: '#0e1a13', fontSize: '16px', fontWeight: '600', marginBottom: '8px' }}>Zip Code *</label>
+                <input type="text" name="zipCode" value={formData.zipCode} onChange={handleInputChange} required placeholder="Enter zip code" style={{ width: '100%', padding: '12px', border: '1px solid #daeded', borderRadius: '8px', fontSize: '16px' }} />
               </div>
             </div>
 
             <div style={{ marginBottom: '32px' }}>
-              <label style={{ display: 'block', color: '#0e1a13', fontSize: '16px', fontWeight: '600', marginBottom: '8px' }}>
-                Organization Description
-              </label>
-              <textarea
-                name="description"
-                value={formData.description}
-                onChange={handleInputChange}
-                rows="4"
-                style={{
-                  width: '100%',
-                  padding: '12px',
-                  border: '1px solid #daeded',
-                  borderRadius: '8px',
-                  fontSize: '16px',
-                  resize: 'vertical'
-                }}
-                placeholder="Tell us about your organization and how you plan to use the platform..."
-              />
+              <label style={{ display: 'block', color: '#0e1a13', fontSize: '16px', fontWeight: '600', marginBottom: '8px' }}>Brief Description of Organization</label>
+              <textarea name="description" value={formData.description} onChange={handleInputChange} rows="4" placeholder="Tell us about your organization's mission..." style={{ width: '100%', padding: '12px', border: '1px solid #daeded', borderRadius: '8px', fontSize: '16px', resize: 'vertical' }} />
             </div>
 
             <div style={{ textAlign: 'center' }}>
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                style={{
-                  padding: '16px 32px',
-                  backgroundColor: isSubmitting ? '#cccccc' : '#38e07b',
-                  color: '#0e1a13',
-                  fontWeight: '700',
-                  fontSize: '18px',
-                  borderRadius: '8px',
-                  border: 'none',
-                  cursor: isSubmitting ? 'not-allowed' : 'pointer',
-                  transition: 'background-color 0.3s'
-                }}
-                onMouseOver={(e) => {
-                  if (!isSubmitting) e.target.style.backgroundColor = '#2bc066';
-                }}
-                onMouseOut={(e) => {
-                  if (!isSubmitting) e.target.style.backgroundColor = '#38e07b';
-                }}
-              >
-                {isSubmitting ? 'Submitting...' : 'Submit Registration'}
+              <button type="submit" disabled={isSubmitting} style={{ padding: '12px 32px', backgroundColor: isSubmitting ? '#a0a0a0' : '#2a8a5f', color: 'white', fontWeight: 'bold', fontSize: '16px', borderRadius: '12px', border: 'none', cursor: isSubmitting ? 'not-allowed' : 'pointer', transition: 'background-color 0.3s' }}>
+                {isSubmitting ? 'Submitting...' : 'Register Organization'}
               </button>
             </div>
           </form>
-        </div>
-
-        {/* Additional Information */}
-        <div style={{
-          padding: '24px',
-          backgroundColor: '#e8f2ec',
-          borderRadius: '12px',
-          border: '1px solid #daeded',
-          textAlign: 'center'
-        }}>
-          <h3 style={{ color: '#0e1a13', fontSize: '20px', fontWeight: '700', marginBottom: '16px' }}>
-            What Happens Next?
-          </h3>
-          <p style={{ color: '#51946c', fontSize: '16px', lineHeight: '1.6', marginBottom: '16px' }}>
-            After submitting your registration, our team will review your application and contact you within 2-3 business days to complete the onboarding process.
-          </p>
-          <p style={{ color: '#51946c', fontSize: '16px', lineHeight: '1.6' }}>
-            If you have any questions, please contact us at{' '}
-            <a href="mailto:info@foodsaver.com" style={{ color: '#38e07b', textDecoration: 'none', fontWeight: '600' }}>
-              info@foodsaver.com
-            </a>
-          </p>
         </div>
       </div>
     </div>
