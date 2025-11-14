@@ -15,21 +15,40 @@ const AdminDashboard = () => {
     fetchData();
   }, []);
 
-  const fetchData = async () => {
-    try {
-      const [statsRes, pendingRes, logsRes] = await Promise.all([
-        fetch('/api/admin/stats'),
-        fetch('/api/admin/pending'),
-        fetch('/api/admin/logs?limit=10')
-      ]);
-      setStats(await statsRes.json());
-      setPendingOrgs(await pendingRes.json());
-      setDonationLogs(await logsRes.json());
-      setLoading(false);
-    } catch (err) {
-      console.error('Failed to load admin data');
+  const fetchData = () => {
+  // MOCK DATA (temporary, until backend exists)
+  setStats({
+    totalOrgs: 20,
+    totalKg: 1200,
+    meals: 3200,
+    activePartnerships: 14,
+  });
+
+  setPendingOrgs([
+    {
+      _id: "1",
+      organizationName: "Test Restaurant",
+      organizationType: "restaurant",
+      contactPerson: "John Doe",
+      email: "john@test.com",
+      status: "pending",
     }
-  };
+  ]);
+
+  setDonationLogs([
+    {
+      _id: "log1",
+      date: "2025-11-10T14:30:00Z",
+      restaurantName: "Test Restaurant",
+      ngoName: "Hope NGO",
+      weightKg: 12,
+      status: "completed"
+    }
+  ]);
+
+  setLoading(false);
+};
+
 
   // 📊 Mock chart data (replace with API)
   const impactData = {
@@ -170,5 +189,10 @@ const StatCard = ({ title, value, icon }) => (
     </div>
   </div>
 );
+
+<button onClick={() => alert("Backend coming soon!")}>
+  Backend Mode (coming soon)
+</button>
+
 
 export default AdminDashboard;
