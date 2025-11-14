@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import useTypewriter from '../hooks/useTypewriter';
+import CountUp from 'react-countup';
 
 const Home = () => {
   const typewriterTexts = ["Connecting Restaurants...", "Feeding the Hungry...", "Saving Surplus Food..."];
@@ -75,15 +76,22 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Stats Section */}
-      <div className="stats-section">
-        {statsData.map((stat, index) => (
-          <div key={index} className="stat-card">
-            <p className="stat-label">{stat.label}</p>
-            <p className="stat-value">{stat.value}</p>
-          </div>
-        ))}
+    <div className="stats-section">
+  {statsData.map((stat, index) => (
+    <div key={index} className="stat-card">
+      <div className="stat-icon">
+        {index === 0 && <i className="fas fa-utensils"></i>}
+        {index === 1 && <i className="fas fa-hand-holding-heart"></i>}
+        {index === 2 && <i className="fas fa-users"></i>}
       </div>
+      <p className="stat-value">
+  <CountUp end={parseInt(stat.value.replace(/\D/g, ''))} duration={2} /> {stat.value.includes('kg') ? 'kg' : ''}
+</p>
+      <p className="stat-label">{stat.label}</p>
+    </div>
+  ))}
+</div>
+
 
       {/* How It Works Section */}
       <div className="how-it-works-section">

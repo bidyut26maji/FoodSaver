@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion'; // ✨ Animation library
 
 const Works = () => {
   const stepsData = [
@@ -37,7 +38,7 @@ const Works = () => {
 
   return (
     <div className="content-wrapper">
-      {/* Back to Home Button */}
+      {/* Back to Home */}
       <div style={{ padding: '12px 16px' }}>
         <Link
           to="/"
@@ -53,8 +54,6 @@ const Works = () => {
             textDecoration: 'none',
             transition: 'background-color 0.3s'
           }}
-          onMouseOver={(e) => e.target.style.backgroundColor = '#7bcc9b'}
-          onMouseOut={(e) => e.target.style.backgroundColor = '#94e0b2'}
         >
           ⬅ Back to Home
         </Link>
@@ -67,10 +66,10 @@ const Works = () => {
           minHeight: '400px',
           flexDirection: 'column',
           gap: '24px',
-          backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")',
+          backgroundImage:
+            'linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url("https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1200&q=80")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
           borderRadius: '8px',
           alignItems: 'center',
           justifyContent: 'center',
@@ -78,30 +77,39 @@ const Works = () => {
           marginBottom: '40px'
         }}
       >
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', textAlign: 'center' }}>
-          <h1
-            style={{
-              color: 'white',
-              fontSize: '2.5rem',
-              fontWeight: '900',
-              lineHeight: '1.25',
-              letterSpacing: '-0.033em'
-            }}
-          >
-            How FoodSaver Works
-          </h1>
-          <h2 style={{ color: 'white', fontSize: '1rem', fontWeight: '400', lineHeight: '1.5' }}>
-            A simple 5-step process to connect surplus food with those who need it most.
-          </h2>
-        </div>
+        <h1
+          style={{
+            color: 'white',
+            fontSize: '2.5rem',
+            fontWeight: '900',
+            textAlign: 'center'
+          }}
+        >
+          How FoodSaver Works
+        </h1>
+        <p
+          style={{
+            color: 'white',
+            fontSize: '1rem',
+            textAlign: 'center',
+            maxWidth: '600px'
+          }}
+        >
+          A simple 5-step process to connect surplus food with those who need it most.
+        </p>
       </div>
 
-      {/* Steps Section */}
+      {/* Animated Steps Section */}
       <div style={{ padding: '0 16px' }}>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '32px', marginBottom: '40px' }}>
           {stepsData.map((step, index) => (
-            <div
+            <motion.div
               key={index}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.15 }}
+              whileHover={{ scale: 1.03 }}
+              viewport={{ once: true }}
               style={{
                 display: 'flex',
                 gap: '24px',
@@ -109,10 +117,15 @@ const Works = () => {
                 backgroundColor: '#f8fbfa',
                 borderRadius: '12px',
                 border: '1px solid #daeded',
-                alignItems: 'flex-start'
+                alignItems: 'flex-start',
+                boxShadow: '0 4px 12px rgba(0, 0, 0, 0.05)',
+                transition: 'box-shadow 0.3s'
               }}
             >
-              <div
+              <motion.div
+                initial={{ rotate: -15, scale: 0.8 }}
+                whileInView={{ rotate: 0, scale: 1 }}
+                transition={{ type: 'spring', stiffness: 120 }}
                 style={{
                   display: 'flex',
                   alignItems: 'center',
@@ -126,7 +139,8 @@ const Works = () => {
                 }}
               >
                 {step.icon}
-              </div>
+              </motion.div>
+
               <div style={{ flex: 1 }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '8px' }}>
                   <span
@@ -145,31 +159,20 @@ const Works = () => {
                   >
                     {step.step}
                   </span>
-                  <h3
-                    style={{
-                      color: '#0e1a13',
-                      fontSize: '20px',
-                      fontWeight: '700',
-                      margin: 0
-                    }}
-                  >
+                  <h3 style={{ color: '#0e1a13', fontSize: '20px', fontWeight: '700', margin: 0 }}>
                     {step.title}
                   </h3>
                 </div>
-                <p
-                  style={{
-                    color: '#51946c',
-                    fontSize: '16px',
-                    lineHeight: '1.6',
-                    margin: 0
-                  }}
-                >
+                <p style={{ color: '#51946c', fontSize: '16px', lineHeight: '1.6', margin: 0 }}>
                   {step.description}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
+     
+   
+  
 
         {/* Benefits Section */}
         <div style={{ marginBottom: '40px' }}>

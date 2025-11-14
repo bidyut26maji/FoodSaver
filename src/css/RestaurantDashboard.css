@@ -1,0 +1,544 @@
+/* src/pages/RestaurantDashboard.css */
+.restaurant-dashboard {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* === Header === */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.dashboard-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #0f766e;
+  margin: 0;
+}
+
+.dashboard-subtitle {
+  color: #4b5563;
+  font-size: 1.1rem;
+  margin-top: 8px;
+}
+
+.header-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* === KPI Cards === */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.kpi-card {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s;
+}
+
+.kpi-card:hover {
+  transform: translateY(-3px);
+}
+
+.kpi-icon {
+  width: 60px;
+  height: 60px;
+  background: #ecfdf5;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: #0f766e;
+  margin-right: 16px;
+}
+
+.kpi-content {
+  flex: 1;
+}
+
+.kpi-value {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0f766e;
+  margin: 0 0 4px;
+}
+
+.kpi-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0 0 4px;
+}
+
+.kpi-subtitle {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin: 0;
+}
+
+/* === Dashboard Body Layout === */
+.dashboard-body {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 992px) {
+  .dashboard-body {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* === Cards === */
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 24px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.section-header h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+}
+
+/* === Buttons === */
+.btn {
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: all 0.2s;
+}
+
+.btn i {
+  font-size: 0.9em;
+}
+
+.btn-outline {
+  background: white;
+  color: #0f766e;
+  border: 2px solid #0f766e;
+}
+
+.btn-outline:hover {
+  background: #f0fdfa;
+}
+
+.btn-donate {
+  background: #0d9488;
+  color: white;
+  padding: 12px 24px;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(13, 148, 136, 0.3);
+}
+
+.btn-donate:hover {
+  background: #0f766e;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(13, 148, 136, 0.4);
+}
+
+.btn-primary {
+  background: #10b981;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #0d9a6d;
+}
+
+.btn-success {
+  background: #10b981;
+  color: white;
+}
+
+.btn-warning {
+  background: #f59e0b;
+  color: white;
+}
+
+.btn-danger {
+  background: #ef4444;
+  color: white;
+}
+
+.btn-sm {
+  padding: 6px 12px;
+  font-size: 0.875rem;
+}
+
+.btn-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin: 0 2px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+/* === Orders Table === */
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.orders-table th,
+.orders-table td {
+  padding: 14px 12px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.orders-table th {
+  font-weight: 600;
+  color: #4b5563;
+  background: #f8fafc;
+}
+
+.orders-table tr.completed {
+  background-color: #f0fdfa;
+}
+
+.orders-table tr.completed td {
+  color: #065f46;
+}
+
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.status-badge.pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status-badge.completed {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.action-cell {
+  display: flex;
+  gap: 6px;
+}
+
+.table-container {
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.no-data {
+  text-align: center;
+  color: #64748b;
+  padding: 32px;
+  font-style: italic;
+}
+
+/* === Sales Chart === */
+.sales-chart {
+  display: flex;
+  align-items: flex-end;
+  height: 200px;
+  gap: 12px;
+  padding: 20px 0;
+}
+
+.chart-bar {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bar {
+  flex: 1;
+  width: 36px;
+  border-radius: 6px 6px 0 0;
+  position: relative;
+  transition: height 0.4s ease;
+}
+
+.bar-value {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-8px);
+  background: rgba(15, 118, 110, 0.9);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.bar:hover .bar-value {
+  opacity: 1;
+}
+
+.bar-label {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: #4b5563;
+  font-weight: 500;
+}
+
+/* === Quick Actions === */
+.quick-actions-card {
+  margin-top: 16px;
+}
+
+.quick-actions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.quick-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  background: #f0fdfa;
+  border-radius: 12px;
+  border: 2px dashed #a7f3d0;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.quick-action:hover {
+  background: #d1fae5;
+  transform: scale(1.03);
+}
+
+.quick-action .icon {
+  width: 40px;
+  height: 40px;
+  background: #0f766e;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+.quick-action span {
+  font-weight: 600;
+  color: #0f766e;
+  text-align: center;
+}
+
+/* === Menu Management === */
+.menu-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.menu-form input {
+  padding: 12px 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.price-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.switch {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: relative;
+  display: block;
+  width: 48px;
+  height: 24px;
+  background: #cbd5e1;
+  border-radius: 24px;
+  transition: 0.3s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+input:checked + .slider {
+  background: #10b981;
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+.switch-label {
+  margin-left: 8px;
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background: #f8fafc;
+  border-radius: 12px;
+  border-left: 4px solid #10b981;
+}
+
+.item-info h4 {
+  margin: 0 0 4px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.item-info p {
+  margin: 0;
+  color: #0f766e;
+  font-weight: 600;
+}
+
+.item-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.availability span {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.availability .available {
+  color: #16a34a;
+}
+
+.availability .unavailable {
+  color: #dc2626;
+}
+
+/* === Newsletter === */
+.newsletter-form {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .dashboard-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .header-actions {
+    justify-content: center;
+  }
+
+  .dashboard-body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .table-container {
+    font-size: 0.9rem;
+  }
+
+  .orders-table th,
+  .orders-table td {
+    padding: 10px 8px;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .quick-actions {
+    width: 100%;
+  }
+}

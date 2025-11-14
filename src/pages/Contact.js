@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Faq from '../components/Faq';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -361,63 +362,9 @@ const Contact = () => {
         </div>
 
         {/* FAQ Section */}
-        <div style={{
-          padding: '32px',
-          backgroundColor: '#e8f2ec',
-          borderRadius: '12px',
-          border: '1px solid #daeded',
-          marginBottom: '40px'
-        }}>
-          <h2
-            style={{
-              color: '#0e1a13',
-              fontSize: '24px',
-              fontWeight: '700',
-              textAlign: 'center',
-              marginBottom: '32px'
-            }}
-          >
-            Frequently Asked Questions
-          </h2>
-          
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
-            <div>
-              <h3 style={{ color: '#0e1a13', fontSize: '18px', fontWeight: '600', marginBottom: '8px' }}>
-                How does FoodSaver work?
-              </h3>
-              <p style={{ color: '#51946c', fontSize: '16px', lineHeight: '1.6', margin: 0 }}>
-                Restaurants list their surplus food on our platform, and NGOs can browse and coordinate pickups to distribute to those in need.
-              </p>
-            </div>
-            
-            <div>
-              <h3 style={{ color: '#0e1a13', fontSize: '18px', fontWeight: '600', marginBottom: '8px' }}>
-                Is FoodSaver free to use?
-              </h3>
-              <p style={{ color: '#51946c', fontSize: '16px', lineHeight: '1.6', margin: 0 }}>
-                Yes, FoodSaver is completely free for both restaurants and NGOs. We believe in making food donation accessible to everyone.
-              </p>
-            </div>
-            
-            <div>
-              <h3 style={{ color: '#0e1a13', fontSize: '18px', fontWeight: '600', marginBottom: '8px' }}>
-                How do I get started?
-              </h3>
-              <p style={{ color: '#51946c', fontSize: '16px', lineHeight: '1.6', margin: 0 }}>
-                Simply register your organization on our platform, and our team will guide you through the onboarding process.
-              </p>
-            </div>
-            
-            <div>
-              <h3 style={{ color: '#0e1a13', fontSize: '18px', fontWeight: '600', marginBottom: '8px' }}>
-                What types of food can be donated?
-              </h3>
-              <p style={{ color: '#51946c', fontSize: '16px', lineHeight: '1.6', margin: 0 }}>
-                We accept all types of surplus food that is safe for consumption, including prepared meals, ingredients, and packaged goods.
-              </p>
-            </div>
-          </div>
-        </div>
+        <Faq/>
+        
+        
       </div>
     </div>
   );

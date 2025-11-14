@@ -354,7 +354,7 @@ const Restaurant = () => {
           Join hundreds of restaurants already making an impact in their communities.
         </p>
         <Link
-          to="/registration"
+          to="/restaurant-dashboard"
           style={{
             display: 'inline-flex',
             alignItems: 'center',
