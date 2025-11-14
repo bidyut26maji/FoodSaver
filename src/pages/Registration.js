@@ -29,7 +29,6 @@ const Registration = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
     setTimeout(() => {
       setIsSubmitting(false);
       alert('Registration submitted successfully! We will contact you soon.');
@@ -39,20 +38,21 @@ const Registration = () => {
   return (
     <div className="content-wrapper">
       {/* Back to Home Button */}
-      <div style={{ padding: '12px 16px' }}>
+      <div style={{ padding: '16px' }}>
         <Link
           to="/"
           style={{
             display: 'inline-flex',
             alignItems: 'center',
-            padding: '8px 16px',
+            padding: '10px 20px',
             backgroundColor: '#94e0b2',
             color: '#101914',
             fontWeight: 'bold',
-            fontSize: '14px',
+            fontSize: '15px',
             borderRadius: '12px',
             textDecoration: 'none',
-            transition: 'background-color 0.3s'
+            transition: 'background-color 0.3s',
+            boxShadow: '0 2px 6px rgba(0,0,0,0.1)',
           }}
           onMouseOver={(e) => e.target.style.backgroundColor = '#7bcc9b'}
           onMouseOut={(e) => e.target.style.backgroundColor = '#94e0b2'}
@@ -61,64 +61,87 @@ const Registration = () => {
         </Link>
       </div>
 
-      {/* Hero Section */}
+      {/* ✅ ENHANCED Hero Section */}
       <div
         style={{
           display: 'flex',
+          height: '400px', // taller for better visual impact
           minHeight: '300px',
           flexDirection: 'column',
-          gap: '24px',
-          backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")',
+          justifyContent: 'center',
+          alignItems: 'center',
+          textAlign: 'center',
+          padding: '0 24px',
+          marginBottom: '48px',
+          borderRadius: '16px', // consistent modern radius
+          backgroundImage: `
+            linear-gradient(
+              to bottom,
+              rgba(0, 0, 0, 0.6) 0%,
+              rgba(0, 0, 0, 0.3) 100%
+            ),
+            url("https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80")
+          `,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          borderRadius: '8px',
-          alignItems: 'center',
-          justifyContent: 'center',
-          padding: '16px',
-          marginBottom: '40px'
+          position: 'relative',
+          overflow: 'hidden',
         }}
       >
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', textAlign: 'center' }}>
+        <div style={{ maxWidth: '700px', zIndex: 2 }}>
           <h1
             style={{
               color: 'white',
-              fontSize: '2.5rem',
-              fontWeight: '900',
-              lineHeight: '1.25',
-              letterSpacing: '-0.033em'
+              fontSize: 'clamp(2rem, 5vw, 3rem)', // responsive font
+              fontWeight: '800',
+              lineHeight: 1.2,
+              margin: '0 0 16px',
+              textShadow: '0 2px 8px rgba(0,0,0,0.4)',
             }}
           >
-            Join FoodSaver
+            Join FoodSaver Today
           </h1>
-          <h2 style={{ color: 'white', fontSize: '1rem', fontWeight: '400', lineHeight: '1.5' }}>
-            Register your organization and start making a difference in your community.
-          </h2>
+          <p
+            style={{
+              color: 'rgba(255, 255, 255, 0.95)',
+              fontSize: 'clamp(1rem, 3.5vw, 1.25rem)',
+              fontWeight: '400',
+              lineHeight: 1.5,
+              margin: 0,
+              maxWidth: '600px',
+              padding: '0 12px',
+            }}
+          >
+            Register your organization and help reduce food waste while feeding those in need.
+          </p>
         </div>
       </div>
 
-      {/* Registration Form */}
+      {/* Registration Form & Rest Unchanged (except minor spacing) */}
       <div style={{ padding: '0 16px', maxWidth: '800px', margin: '0 auto' }}>
         <div style={{
-          padding: '32px',
+          padding: '36px',
           backgroundColor: '#f8fbfa',
-          borderRadius: '12px',
+          borderRadius: '16px',
           border: '1px solid #daeded',
-          marginBottom: '40px'
+          boxShadow: '0 4px 20px rgba(0,0,0,0.03)',
+          marginBottom: '48px'
         }}>
           <h2
             style={{
               color: '#0e1a13',
-              fontSize: '24px',
+              fontSize: '28px',
               fontWeight: '700',
               textAlign: 'center',
-              marginBottom: '32px'
+              marginBottom: '36px'
             }}
           >
             Organization Registration
           </h2>
 
           <form onSubmit={handleSubmit}>
+            {/* ✅ Keep all form fields the same — they’re clean and functional */}
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px', marginBottom: '24px' }}>
               <div>
                 <label style={{ display: 'block', color: '#0e1a13', fontSize: '16px', fontWeight: '600', marginBottom: '8px' }}>
@@ -131,11 +154,12 @@ const Registration = () => {
                   required
                   style={{
                     width: '100%',
-                    padding: '12px',
+                    padding: '14px',
                     border: '1px solid #daeded',
-                    borderRadius: '8px',
+                    borderRadius: '10px',
                     fontSize: '16px',
-                    backgroundColor: 'white'
+                    backgroundColor: 'white',
+                    boxShadow: '0 1px 3px rgba(0,0,0,0.05)'
                   }}
                 >
                   <option value="">Select Organization Type</option>
@@ -159,10 +183,11 @@ const Registration = () => {
                   required
                   style={{
                     width: '100%',
-                    padding: '12px',
+                    padding: '14px',
                     border: '1px solid #daeded',
-                    borderRadius: '8px',
-                    fontSize: '16px'
+                    borderRadius: '10px',
+                    fontSize: '16px',
+                    boxShadow: '0 1px 3px rgba(0,0,0,0.05)'
                   }}
                   placeholder="Enter organization name"
                 />
@@ -182,10 +207,11 @@ const Registration = () => {
                   required
                   style={{
                     width: '100%',
-                    padding: '12px',
+                    padding: '14px',
                     border: '1px solid #daeded',
-                    borderRadius: '8px',
-                    fontSize: '16px'
+                    borderRadius: '10px',
+                    fontSize: '16px',
+                    boxShadow: '0 1px 3px rgba(0,0,0,0.05)'
                   }}
                   placeholder="Enter contact person name"
                 />
@@ -203,10 +229,11 @@ const Registration = () => {
                   required
                   style={{
                     width: '100%',
-                    padding: '12px',
+                    padding: '14px',
                     border: '1px solid #daeded',
-                    borderRadius: '8px',
-                    fontSize: '16px'
+                    borderRadius: '10px',
+                    fontSize: '16px',
+                    boxShadow: '0 1px 3px rgba(0,0,0,0.05)'
                   }}
                   placeholder="Enter email address"
                 />
@@ -226,10 +253,11 @@ const Registration = () => {
                   required
                   style={{
                     width: '100%',
-                    padding: '12px',
+                    padding: '14px',
                     border: '1px solid #daeded',
-                    borderRadius: '8px',
-                    fontSize: '16px'
+                    borderRadius: '10px',
+                    fontSize: '16px',
+                    boxShadow: '0 1px 3px rgba(0,0,0,0.05)'
                   }}
                   placeholder="Enter phone number"
                 />
@@ -247,10 +275,11 @@ const Registration = () => {
                   required
                   style={{
                     width: '100%',
-                    padding: '12px',
+                    padding: '14px',
                     border: '1px solid #daeded',
-                    borderRadius: '8px',
-                    fontSize: '16px'
+                    borderRadius: '10px',
+                    fontSize: '16px',
+                    boxShadow: '0 1px 3px rgba(0,0,0,0.05)'
                   }}
                   placeholder="Enter street address"
                 />
@@ -270,10 +299,11 @@ const Registration = () => {
                   required
                   style={{
                     width: '100%',
-                    padding: '12px',
+                    padding: '14px',
                     border: '1px solid #daeded',
-                    borderRadius: '8px',
-                    fontSize: '16px'
+                    borderRadius: '10px',
+                    fontSize: '16px',
+                    boxShadow: '0 1px 3px rgba(0,0,0,0.05)'
                   }}
                   placeholder="Enter city"
                 />
@@ -291,10 +321,11 @@ const Registration = () => {
                   required
                   style={{
                     width: '100%',
-                    padding: '12px',
+                    padding: '14px',
                     border: '1px solid #daeded',
-                    borderRadius: '8px',
-                    fontSize: '16px'
+                    borderRadius: '10px',
+                    fontSize: '16px',
+                    boxShadow: '0 1px 3px rgba(0,0,0,0.05)'
                   }}
                   placeholder="Enter state"
                 />
@@ -312,17 +343,18 @@ const Registration = () => {
                   required
                   style={{
                     width: '100%',
-                    padding: '12px',
+                    padding: '14px',
                     border: '1px solid #daeded',
-                    borderRadius: '8px',
-                    fontSize: '16px'
+                    borderRadius: '10px',
+                    fontSize: '16px',
+                    boxShadow: '0 1px 3px rgba(0,0,0,0.05)'
                   }}
                   placeholder="Enter ZIP code"
                 />
               </div>
             </div>
 
-            <div style={{ marginBottom: '32px' }}>
+            <div style={{ marginBottom: '36px' }}>
               <label style={{ display: 'block', color: '#0e1a13', fontSize: '16px', fontWeight: '600', marginBottom: '8px' }}>
                 Organization Description
               </label>
@@ -333,11 +365,12 @@ const Registration = () => {
                 rows="4"
                 style={{
                   width: '100%',
-                  padding: '12px',
+                  padding: '14px',
                   border: '1px solid #daeded',
-                  borderRadius: '8px',
+                  borderRadius: '10px',
                   fontSize: '16px',
-                  resize: 'vertical'
+                  resize: 'vertical',
+                  boxShadow: '0 1px 3px rgba(0,0,0,0.05)'
                 }}
                 placeholder="Tell us about your organization and how you plan to use the platform..."
               />
@@ -348,15 +381,16 @@ const Registration = () => {
                 type="submit"
                 disabled={isSubmitting}
                 style={{
-                  padding: '16px 32px',
+                  padding: '16px 40px',
                   backgroundColor: isSubmitting ? '#cccccc' : '#38e07b',
                   color: '#0e1a13',
                   fontWeight: '700',
                   fontSize: '18px',
-                  borderRadius: '8px',
+                  borderRadius: '10px',
                   border: 'none',
                   cursor: isSubmitting ? 'not-allowed' : 'pointer',
-                  transition: 'background-color 0.3s'
+                  transition: 'all 0.3s ease',
+                  boxShadow: '0 4px 12px rgba(56, 224, 123, 0.3)',
                 }}
                 onMouseOver={(e) => {
                   if (!isSubmitting) e.target.style.backgroundColor = '#2bc066';
@@ -371,22 +405,23 @@ const Registration = () => {
           </form>
         </div>
 
-        {/* Additional Information */}
+        {/* Additional Info Box */}
         <div style={{
-          padding: '24px',
+          padding: '28px',
           backgroundColor: '#e8f2ec',
-          borderRadius: '12px',
+          borderRadius: '16px',
           border: '1px solid #daeded',
-          textAlign: 'center'
+          textAlign: 'center',
+          boxShadow: '0 4px 12px rgba(0,0,0,0.02)'
         }}>
-          <h3 style={{ color: '#0e1a13', fontSize: '20px', fontWeight: '700', marginBottom: '16px' }}>
+          <h3 style={{ color: '#0e1a13', fontSize: '22px', fontWeight: '700', marginBottom: '16px' }}>
             What Happens Next?
           </h3>
           <p style={{ color: '#51946c', fontSize: '16px', lineHeight: '1.6', marginBottom: '16px' }}>
-            After submitting your registration, our team will review your application and contact you within 2-3 business days to complete the onboarding process.
+            After submitting your registration, our team will review your application and contact you within 2–3 business days to complete onboarding.
           </p>
           <p style={{ color: '#51946c', fontSize: '16px', lineHeight: '1.6' }}>
-            If you have any questions, please contact us at{' '}
+            Questions? Email us at{' '}
             <a href="mailto:info@foodsaver.com" style={{ color: '#38e07b', textDecoration: 'none', fontWeight: '600' }}>
               info@foodsaver.com
             </a>
