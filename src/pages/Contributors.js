@@ -5,9 +5,10 @@ import '../css/Contributors.css';
 import ContributorModal from './ContributorModal'; 
 
 // --- Define your repo details ---
-const REPO_OWNER = 'abhishekkumar177';
+const REPO_OWNER = 'bidyut26maji';
 const REPO_NAME = 'FoodSaver';
-const PROJECT_LEAD = 'abhishekkumar177'; // Your GitHub username
+const PROJECT_LEAD = 'bidyut26maji';
+const PROJECT_CO_LEAD = 'abhishekkumar177';
 
 const Contributors = () => {
   const [stats, setStats] = useState({
