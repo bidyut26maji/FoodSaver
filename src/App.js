@@ -14,6 +14,7 @@ import Contact from './pages/Contact';
 import RestaurantDashboard from './pages/RestaurantDashboard';
 import NGODashboard from './pages/NGODashboard';
 import AdminDashboard from './pages/AdminDashboard';
+import Contributors from './pages/Contributors';
 import './App.css';
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
             <Route path="/restaurant-dashboard" element={<RestaurantDashboard />} />
             <Route path="/ngo-dashboard" element={<NGODashboard />} />
             <Route path="/admin" element={<AdminDashboard />} />
+            <Route path="/contributors" element={<Contributors />} />
           </Routes>
         </main>
         <Footer />
