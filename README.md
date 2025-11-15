@@ -6,6 +6,35 @@ A modern React application that connects restaurants with NGOs to reduce food wa
 
 <img src="https://github.com/Mayur-Pagote/README_Design_Kit/blob/730d340c8008758ac291ebc555f818f851feda0f/Assets/RGB%20Line%20Thick.gif" width="100%" />
 
+## 📑 Table of Contents
+
+- [Project Vision & Impact](#project-vision--impact)
+  - [Our Mission](#our-mission)
+  - [The Problem We're Solving](#the-problem-were-solving)
+  - [Real-World Impact](#real-world-impact)
+  - [Who Benefits](#who-benefits)
+- [Features](#-features)
+- [Pages](#-pages)
+- [Technologies Used](#-technologies-used)
+- [Architecture](#architecture)
+- [Installation](#-installation)
+- [Project Structure](#-project-structure)
+- [Design System](#-design-system)
+- [Available Scripts](#-available-scripts)
+- [Responsive Design](#-responsive-design)
+- [Key Features](#-key-features)
+- [Deployment](#-deployment)
+- [Contributing](#-contributing)
+- [License](#-license)
+- [Connect with the Maintainer](#-connect-with-the-maintainer)
+- [Contributors](#contributors)
+- [Stargazers](#stargazers)
+- [Forkers](#forkers)
+- [Support the Project](#-support-the-project)
+- [Support](#-support)
+- [Acknowledgments](#-acknowledgments)
+
+
 ## 🌍 Project Vision & Impact
 
 ### Our Mission
