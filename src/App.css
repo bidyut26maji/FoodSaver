@@ -421,9 +421,9 @@ body {
 
 .footer-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 40px;
-  max-width: 1250px;
+  /* This creates 5 columns of equal width */
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
   margin: 0 auto;
 }
 
