@@ -6,6 +6,29 @@ A modern React application that connects restaurants with NGOs to reduce food wa
 
 <img src="https://github.com/Mayur-Pagote/README_Design_Kit/blob/730d340c8008758ac291ebc555f818f851feda0f/Assets/RGB%20Line%20Thick.gif" width="100%" />
 
+## 🌍 Project Vision & Impact
+
+### Our Mission
+**FoodSaver** bridges the gap between surplus food and those who need it most. We connect restaurants and food businesses with NGOs and community organizations to ensure that excess food reaches people instead of landfills.
+
+### The Problem We're Solving
+- **Food Waste Crisis**: Millions of tons of edible food are wasted annually while communities face hunger
+- **Environmental Impact**: Food waste contributes significantly to greenhouse gas emissions
+- **Resource Inefficiency**: Restaurants often have surplus food with no easy way to donate it
+
+### Real-World Impact
+✨ **Reduce Food Waste** – Every meal saved is a step toward sustainability  
+🤝 **Fight Hunger** – Connect surplus food with NGOs serving communities in need  
+🌱 **Environmental Sustainability** – Less waste means reduced carbon footprint  
+💡 **Community Building** – Foster partnerships between businesses and social organizations
+
+### Who Benefits
+- **Restaurants & Food Businesses**: Reduce waste, gain tax benefits, and build community goodwill
+- **NGOs & Community Organizations**: Reliable access to quality food donations
+- **Communities**: Better food security and nutrition
+- **Environment**: Reduced landfill waste and lower carbon emissions
+
+
 ## 🚀 Features
 
 - **Modern React Architecture**: Built with React 18, React Router, and modern JavaScript
