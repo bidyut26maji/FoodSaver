@@ -190,7 +190,7 @@ const Home = () => {
           padding: "0 20px",
         }}
       >
-        {/* Hero Section — Split Layout */}
+        {/* Hero Section */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -283,7 +283,7 @@ const Home = () => {
             </motion.button>
           </div>
 
-          {/* Right: Image */}
+         
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
