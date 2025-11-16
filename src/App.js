@@ -15,6 +15,7 @@ import RestaurantDashboard from './pages/RestaurantDashboard';
 import NGODashboard from './pages/NGODashboard';
 import AdminDashboard from './pages/AdminDashboard';
 import Contributors from './pages/Contributors';
+import Contribute from './pages/Contribute';
 import './App.css';
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
             <Route path="/ngo-dashboard" element={<NGODashboard />} />
             <Route path="/admin" element={<AdminDashboard />} />
             <Route path="/contributors" element={<Contributors />} />
+            <Route path="/contribute" element={<Contribute />} />
           </Routes>
         </main>
         <Footer />

@@ -36,7 +36,7 @@ const Footer = () => {
             <a href="#" aria-label="Instagram" className="social-icon"><i className="fab fa-instagram"></i></a>
             <a href="#" aria-label="LinkedIn" className="social-icon"><i className="fab fa-linkedin"></i></a>
           </div>
-          <li><Link to="/contributors" className="footer-link">Contributors</Link></li>
+          <li><Link to="/contribute" className="footer-link">Contribute</Link></li>
         </div>
 
         {/* Partner Logos */}
