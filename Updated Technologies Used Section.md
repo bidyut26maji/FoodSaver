@@ -1,3 +1,5 @@
+<img width="1536" height="1024" alt="architecture-diagram github" src="https://github.com/user-attachments/assets/feb5621e-e8f2-4340-81be-aa5f90f6beac" />
+
 ## 🛠️ Technologies Used
 
 The FoodSaver application is built using a modern, scalable, and maintainable technology stack. Each technology has been selected to ensure performance, reliability, and a smooth developer experience. The following section provides a detailed overview of all major tools and technologies used throughout the project.
