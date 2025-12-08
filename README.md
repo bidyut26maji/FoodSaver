@@ -33,34 +33,31 @@ A modern React application that connects restaurants with NGOs to reduce food wa
 - [Support the Project](#-support-the-project)
 - [Support](#-support)
 - [Acknowledgments](#-acknowledgments)
-
 * [Contributing](#contributing)
+
 
 ## 🌍 Project Vision & Impact
 
 ### Our Mission
-
 **FoodSaver** bridges the gap between surplus food and those who need it most. We connect restaurants and food businesses with NGOs and community organizations to ensure that excess food reaches people instead of landfills.
 
 ### The Problem We're Solving
-
 - **Food Waste Crisis**: Millions of tons of edible food are wasted annually while communities face hunger
 - **Environmental Impact**: Food waste contributes significantly to greenhouse gas emissions
 - **Resource Inefficiency**: Restaurants often have surplus food with no easy way to donate it
 
 ### Real-World Impact
-
 ✨ **Reduce Food Waste** – Every meal saved is a step toward sustainability  
 🤝 **Fight Hunger** – Connect surplus food with NGOs serving communities in need  
 🌱 **Environmental Sustainability** – Less waste means reduced carbon footprint  
 💡 **Community Building** – Foster partnerships between businesses and social organizations
 
 ### Who Benefits
-
 - **Restaurants & Food Businesses**: Reduce waste, gain tax benefits, and build community goodwill
 - **NGOs & Community Organizations**: Reliable access to quality food donations
 - **Communities**: Better food security and nutrition
 - **Environment**: Reduced landfill waste and lower carbon emissions
+
 
 ## 🚀 Features
 
@@ -94,24 +91,22 @@ A modern React application that connects restaurants with NGOs to reduce food wa
 - **HTML5**: Semantic HTML structure
 
 ## Architecture
+   Here's a visual representation of the app's architecture:
 
-Here's a visual representation of the app's architecture:
+   ![Architecture Diagram](docs/architecture-diagram.png)
 
-![Architecture Diagram](docs/architecture-diagram.png)
 
 <img src="https://github.com/Mayur-Pagote/README_Design_Kit/blob/730d340c8008758ac291ebc555f818f851feda0f/Assets/RGB%20Line%20Thick.gif" width="100%" />
 
 ## 📦 Installation
 
 1. **Clone the repository**:
-
    ```bash
    git clone <repository-url>
    cd foodsaver-app
    ```
 
 2. **Install dependencies**:
-
    ```bash
    npm install
    ```
@@ -159,7 +154,6 @@ foodsaver-app/
 ## 🎨 Design System
 
 ### Color Palette
-
 - **Primary**: `#38e07b` (Green)
 - **Secondary**: `#0b0f0c` (Dark Green)
 - **Tertiary**: `#51946c` (Medium Green)
@@ -168,7 +162,6 @@ foodsaver-app/
 - **Border**: `#daeded` (Light Border)
 
 ### Typography
-
 - **Primary Font**: Work Sans
 - **Secondary Font**: Noto Sans
 - **Font Weights**: 400, 500, 700, 900
@@ -187,33 +180,29 @@ foodsaver-app/
 ## 📱 Responsive Design
 
 The application is fully responsive and works on:
-
 - Desktop (1200px+)
 - Tablet (768px - 1199px)
 - Mobile (320px - 767px)
 
 <img src="https://github.com/Mayur-Pagote/README_Design_Kit/blob/730d340c8008758ac291ebc555f818f851feda0f/Assets/RGB%20Line%20Thick.gif" width="100%" />
 
+
 ## 🌟 Key Features
 
 ### Typewriter Animation
-
 Custom hook that creates a typewriter effect for dynamic text display on the home page.
 
 ### Form Handling
-
 - Registration form with validation
 - Contact form with submission feedback
 - Form state management with React hooks
 
 ### Navigation
-
 - Active link highlighting
 - Responsive navigation menu
 - Smooth transitions between pages
 
 ### Interactive Elements
-
 - Hover effects on buttons and links
 - Loading states for form submissions
 - Responsive image galleries
@@ -225,7 +214,6 @@ Custom hook that creates a typewriter effect for dynamic text display on the hom
 To deploy the application:
 
 1. **Build the production version**:
-
    ```bash
    npm run build
    ```
@@ -260,28 +248,26 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=90&section=header" width="100%"/>
 
 ## 👥 Contributors
-
-<a href="https://github.com/abhishekkumar177/FoodSaver/graphs/contributors">
-  <img src="https://contributors-img.web.app/image?repo=abhishekkumar177/FoodSaver"/>
+<a href="https://github.com/bidyut26maji/FoodSaver/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=bidyut26maji/FoodSaver"/>
 </a>
 
 <img src="https://github.com/Mayur-Pagote/README_Design_Kit/blob/45123f007c79aa8d0c8d9b11b3ff72d6bf4744c7/Assets/Star%20Light%20Line.gif" width="100%">
 
 ## ⭐ Stargazers
-
-<a href="https://github.com/abhishekkumar177/FoodSaver/stargazers">
-  <img src="https://reporoster.com/stars/dark/abhishekkumar177/FoodSaver"/>
+<a href="https://github.com/bidyut26maji/FoodSaver/stargazers">
+  <img src="https://reporoster.com/stars/dark/bidyut26maji/FoodSaver"/>
 </a>
-
 <img src="https://github.com/Mayur-Pagote/README_Design_Kit/blob/45123f007c79aa8d0c8d9b11b3ff72d6bf4744c7/Assets/Star%20Light%20Line.gif" width="100%">
 
-## 🍴 Forkers
 
-<a href="https://github.com/abhishekkumar177/FoodSaver/network/members">
-  <img src="https://reporoster.com/forks/dark/abhishekkumar177/FoodSaver"/>
+## 🍴 Forkers
+<a href="https://github.com/bidyut26maji/FoodSaver/network/members">
+  <img src="https://reporoster.com/forks/dark/bidyut26maji/FoodSaver"/>
 </a>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient"/>
+
 
 ## 🌟 Support the Project
 
@@ -291,12 +277,12 @@ If you found this helpful:
 📢 **Share** it with others
 
 > “Good food brings people together — so does open source.” 🍕💻
-> <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=footer" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=footer" width="100%"/>
+
 
 ## 📞 Support
 
 For support and questions:
-
 - Email: info@foodsaver.com
 - Phone: +1 (234) 567-8900
 - Address: Haldia Institute of Technology, Haldia, West Bengal, India
@@ -306,6 +292,7 @@ For support and questions:
 - Haldia Institute of Technology for supporting this initiative
 - Government of West Bengal for their partnership
 - All the restaurants and NGOs who make this platform possible
+
 
 ## Contributing
 
