@@ -247,21 +247,24 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=90&section=header" width="100%"/>
 
-## Contributors
-
-<img src="https://contributors-img.web.app/image?repo=bidyut26maji/Foodie"/>
-
-<img src="https://github.com/Mayur-Pagote/README_Design_Kit/blob/45123f007c79aa8d0c8d9b11b3ff72d6bf4744c7/Assets/Star%20Light%20Line.gif" width="100%">
-
-## Stargazers
-
-<img src="https://reporoster.com/stars/dark/bidyut26maji/Foodie"/>
+## 👥 Contributors
+<a href="https://github.com/bidyut26maji/FoodSaver/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=bidyut26maji/FoodSaver"/>
+</a>
 
 <img src="https://github.com/Mayur-Pagote/README_Design_Kit/blob/45123f007c79aa8d0c8d9b11b3ff72d6bf4744c7/Assets/Star%20Light%20Line.gif" width="100%">
 
-## Forkers
+## ⭐ Stargazers
+<a href="https://github.com/bidyut26maji/FoodSaver/stargazers">
+  <img src="https://reporoster.com/stars/dark/bidyut26maji/FoodSaver"/>
+</a>
+<img src="https://github.com/Mayur-Pagote/README_Design_Kit/blob/45123f007c79aa8d0c8d9b11b3ff72d6bf4744c7/Assets/Star%20Light%20Line.gif" width="100%">
 
-<img src="https://reporoster.com/forks/dark/bidyut26maji/Foodie"/>
+
+## 🍴 Forkers
+<a href="https://github.com/bidyut26maji/FoodSaver/network/members">
+  <img src="https://reporoster.com/forks/dark/bidyut26maji/FoodSaver"/>
+</a>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient"/>
 
