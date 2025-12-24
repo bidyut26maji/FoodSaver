@@ -195,6 +195,16 @@ const RestaurantDashboard = () => {
   });
   const maxSale = Math.max(...chartData.map(d => d.value), 1);
 
+  // Get theme colors from CSS variables for charts
+  const getChartColors = () => {
+    if (typeof window === 'undefined') return { active: '#10b981', inactive: '#cbd5e1' };
+    const root = getComputedStyle(document.documentElement);
+    return {
+      active: root.getPropertyValue('--color-primary').trim() || '#38e07b',
+      inactive: root.getPropertyValue('--text-muted').trim() || '#6b8576'
+    };
+  };
+
   return (
     <div className="restaurant-dashboard">
       {/* Header */}
@@ -319,20 +329,23 @@ const RestaurantDashboard = () => {
               </button>
             </div>
             <div className="sales-chart">
-              {chartData.map((item, i) => (
-                <div key={i} className="chart-bar">
-                  <div 
-                    className="bar"
-                    style={{ 
-                      height: `${(item.value / maxSale) * 100}%`,
-                      backgroundColor: item.value > 0 ? '#10b981' : '#cbd5e1'
-                    }}
-                  >
-                    <span className="bar-value">₹{item.value}</span>
+              {chartData.map((item, i) => {
+                const chartColors = getChartColors();
+                return (
+                  <div key={i} className="chart-bar">
+                    <div 
+                      className="bar"
+                      style={{ 
+                        height: `${(item.value / maxSale) * 100}%`,
+                        backgroundColor: item.value > 0 ? chartColors.active : chartColors.inactive
+                      }}
+                    >
+                      <span className="bar-value">₹{item.value}</span>
+                    </div>
+                    <span className="bar-label">{item.day}</span>
                   </div>
-                  <span className="bar-label">{item.day}</span>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </section>
 

@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import './NGO.css';
 
 const NGO = () => {
   // SEO optimization
@@ -63,110 +64,36 @@ const NGO = () => {
   return (
     <div className="content-wrapper">
       {/* Back to Home Button */}
-      <div style={{ padding: '12px 16px' }}>
-        <Link
-          to="/"
-          style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            padding: '8px 16px',
-            backgroundColor: '#94e0b2',
-            color: '#101914',
-            fontWeight: 'bold',
-            fontSize: '14px',
-            borderRadius: '12px',
-            textDecoration: 'none',
-            transition: 'background-color 0.3s'
-          }}
-          onMouseOver={(e) => e.target.style.backgroundColor = '#7bcc9b'}
-          onMouseOut={(e) => e.target.style.backgroundColor = '#94e0b2'}
-        >
+      <div className="ngo-back-button-container">
+        <Link to="/" className="ngo-back-button">
           ⬅ Back to Home
         </Link>
       </div>
 
       {/* Hero Section */}
-      <div
-        style={{
-          display: 'flex',
-          minHeight: '400px',
-          flexDirection: 'column',
-          gap: '24px',
-          backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          borderRadius: '8px',
-          alignItems: 'center',
-          justifyContent: 'center',
-          padding: '16px',
-          marginBottom: '40px'
-        }}
-      >
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', textAlign: 'center' }}>
-          <h1
-            style={{
-              color: 'white',
-              fontSize: '2.5rem',
-              fontWeight: '900',
-              lineHeight: '1.25',
-              letterSpacing: '-0.033em'
-            }}
-          >
+      <div className="ngo-hero">
+        <div className="ngo-hero-content">
+          <h1 className="ngo-hero-title">
             For NGOs
           </h1>
-          <h2 style={{ color: 'white', fontSize: '1rem', fontWeight: '400', lineHeight: '1.5' }}>
+          <h2 className="ngo-hero-subtitle">
             Access quality food donations and expand your community impact. Join NGOs making a difference.
           </h2>
         </div>
-        <Link to="/registration" style={{
-          display: 'flex',
-          minWidth: '84px',
-          maxWidth: '480px',
-          cursor: 'pointer',
-          alignItems: 'center',
-          justifyContent: 'center',
-          overflow: 'hidden',
-          borderRadius: '12px',
-          height: '48px',
-          padding: '0 20px',
-          backgroundColor: '#38e07b',
-          color: '#0e1a13',
-          fontSize: '16px',
-          fontWeight: 'bold',
-          lineHeight: 'normal',
-          letterSpacing: '0.015em',
-          textDecoration: 'none'
-        }}>
-          <span style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>Get Started</span>
+        <Link to="/registration" className="ngo-hero-cta">
+          <span>Get Started</span>
         </Link>
       </div>
 
       {/* Benefits Section */}
-      <div style={{ padding: '0 16px', marginBottom: '40px' }}>
-        <h2
-          style={{
-            color: '#0e1a13',
-            fontSize: '28px',
-            fontWeight: '700',
-            textAlign: 'center',
-            marginBottom: '32px'
-          }}
-        >
+      <div className="ngo-section">
+        <h2 className="ngo-section-title">
           Why Join FoodSaver?
         </h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '16px' }}>
+        <div className="ngo-benefits-grid">
           {benefits.map((benefit, index) => (
-            <div
-              key={index}
-              style={{
-                padding: '20px',
-                backgroundColor: '#e8f2ec',
-                borderRadius: '8px',
-                border: '1px solid #daeded'
-              }}
-            >
-              <p style={{ color: '#0e1a13', fontSize: '16px', lineHeight: '1.5', margin: 0 }}>
+            <div key={index} className="ngo-benefit-card">
+              <p className="ngo-benefit-text">
                 ✓ {benefit}
               </p>
             </div>
@@ -175,56 +102,20 @@ const NGO = () => {
       </div>
 
       {/* Features Section */}
-      <div style={{ padding: '0 16px', marginBottom: '40px' }}>
-        <h2
-          style={{
-            color: '#0e1a13',
-            fontSize: '28px',
-            fontWeight: '700',
-            textAlign: 'center',
-            marginBottom: '32px'
-          }}
-        >
+      <div className="ngo-section">
+        <h2 className="ngo-section-title">
           Platform Features
         </h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '24px' }}>
+        <div className="ngo-features-grid">
           {features.map((feature, index) => (
-            <div
-              key={index}
-              style={{
-                padding: '24px',
-                backgroundColor: '#f8fbfa',
-                borderRadius: '12px',
-                border: '1px solid #daeded',
-                textAlign: 'center'
-              }}
-            >
-              <div
-                style={{
-                  fontSize: '48px',
-                  marginBottom: '16px'
-                }}
-              >
+            <div key={index} className="ngo-feature-card">
+              <div className="ngo-feature-icon">
                 {feature.icon}
               </div>
-              <h3
-                style={{
-                  color: '#0e1a13',
-                  fontSize: '20px',
-                  fontWeight: '700',
-                  marginBottom: '12px'
-                }}
-              >
+              <h3 className="ngo-feature-title">
                 {feature.title}
               </h3>
-              <p
-                style={{
-                  color: '#51946c',
-                  fontSize: '16px',
-                  lineHeight: '1.6',
-                  margin: 0
-                }}
-              >
+              <p className="ngo-feature-description">
                 {feature.description}
               </p>
             </div>
@@ -233,23 +124,15 @@ const NGO = () => {
       </div>
 
       {/* Pickup Process Section */}
-      <div style={{ padding: '0 16px', marginBottom: '40px', backgroundColor: '#f8fbfa', borderRadius: '12px', border: '1px solid #daeded' }}>
-        <div style={{ padding: '32px 24px' }}>
-          <h2
-            style={{
-              color: '#0e1a13',
-              fontSize: '28px',
-              fontWeight: '700',
-              textAlign: 'center',
-              marginBottom: '32px'
-            }}
-          >
+      <div className="ngo-section-bg">
+        <div className="ngo-section-inner">
+          <h2 className="ngo-section-title">
             🚚 Food Pickup Process
           </h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px', marginBottom: '32px' }}>
-            <div style={{ padding: '24px', backgroundColor: 'white', borderRadius: '8px', border: '1px solid #daeded' }}>
-              <h3 style={{ color: '#0e1a13', fontSize: '20px', fontWeight: '700', marginBottom: '16px' }}>🔄 Step-by-Step Flow</h3>
-              <ol style={{ color: '#51946c', fontSize: '16px', lineHeight: '1.8', paddingLeft: '20px' }}>
+          <div className="ngo-process-grid">
+            <div className="ngo-process-card">
+              <h3 className="ngo-process-title">🔄 Step-by-Step Flow</h3>
+              <ol className="ngo-process-list">
                 <li><strong>Browse:</strong> View available donations on dashboard</li>
                 <li><strong>Request:</strong> Submit pickup request with details</li>
                 <li><strong>Confirm:</strong> Restaurant confirms availability</li>
@@ -258,9 +141,9 @@ const NGO = () => {
                 <li><strong>Distribute:</strong> Deliver to community within 2 hours</li>
               </ol>
             </div>
-            <div style={{ padding: '24px', backgroundColor: 'white', borderRadius: '8px', border: '1px solid #daeded' }}>
-              <h3 style={{ color: '#0e1a13', fontSize: '20px', fontWeight: '700', marginBottom: '16px' }}>⏰ Realistic Timelines</h3>
-              <ul style={{ color: '#51946c', fontSize: '16px', lineHeight: '1.8', paddingLeft: '20px' }}>
+            <div className="ngo-process-card">
+              <h3 className="ngo-process-title">⏰ Realistic Timelines</h3>
+              <ul className="ngo-process-list">
                 <li><strong>Request Response:</strong> Within 30 minutes</li>
                 <li><strong>Pickup Window:</strong> 1-4 hours from confirmation</li>
                 <li><strong>Distribution:</strong> Within 2 hours of pickup</li>
@@ -268,28 +151,28 @@ const NGO = () => {
               </ul>
             </div>
           </div>
-          <div style={{ padding: '20px', backgroundColor: '#e8f2ec', borderRadius: '8px', border: '1px solid #38e07b' }}>
-            <h4 style={{ color: '#0e1a13', fontSize: '18px', fontWeight: '700', marginBottom: '12px' }}>📝 Roles & Responsibilities</h4>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px' }}>
-              <div>
-                <strong style={{ color: '#0e1a13' }}>NGOs:</strong>
-                <ul style={{ color: '#51946c', fontSize: '14px', paddingLeft: '16px', marginTop: '8px' }}>
+          <div className="ngo-responsibilities-card">
+            <h4 className="ngo-responsibilities-title">📝 Roles & Responsibilities</h4>
+            <div className="ngo-responsibilities-grid">
+              <div className="ngo-responsibility-section">
+                <strong>NGOs:</strong>
+                <ul className="ngo-responsibility-list">
                   <li>Timely pickup coordination</li>
                   <li>Proper transportation equipment</li>
                   <li>Food safety compliance</li>
                 </ul>
               </div>
-              <div>
-                <strong style={{ color: '#0e1a13' }}>Volunteers:</strong>
-                <ul style={{ color: '#51946c', fontSize: '14px', paddingLeft: '16px', marginTop: '8px' }}>
+              <div className="ngo-responsibility-section">
+                <strong>Volunteers:</strong>
+                <ul className="ngo-responsibility-list">
                   <li>Safe food handling</li>
                   <li>Professional communication</li>
                   <li>Timely arrival</li>
                 </ul>
               </div>
-              <div>
-                <strong style={{ color: '#0e1a13' }}>Restaurants:</strong>
-                <ul style={{ color: '#51946c', fontSize: '14px', paddingLeft: '16px', marginTop: '8px' }}>
+              <div className="ngo-responsibility-section">
+                <strong>Restaurants:</strong>
+                <ul className="ngo-responsibility-list">
                   <li>Food preparation standards</li>
                   <li>Proper packaging</li>
                   <li>Clear communication</li>
@@ -301,35 +184,27 @@ const NGO = () => {
       </div>
 
       {/* Storage Recommendations Section */}
-      <div style={{ padding: '0 16px', marginBottom: '40px' }}>
-        <h2
-          style={{
-            color: '#0e1a13',
-            fontSize: '28px',
-            fontWeight: '700',
-            textAlign: 'center',
-            marginBottom: '32px'
-          }}
-        >
+      <div className="ngo-section">
+        <h2 className="ngo-section-title">
           🌡️ Food Storage & Safety Guidelines
         </h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
-          <div style={{ padding: '24px', backgroundColor: '#e8f2ec', borderRadius: '12px', border: '1px solid #daeded' }}>
-            <h3 style={{ color: '#0e1a13', fontSize: '20px', fontWeight: '700', marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+        <div className="ngo-storage-grid">
+          <div className="ngo-storage-card">
+            <h3 className="ngo-storage-title">
               ❄️ Perishable Foods
             </h3>
-            <ul style={{ color: '#51946c', fontSize: '16px', lineHeight: '1.6', paddingLeft: '20px' }}>
+            <ul className="ngo-storage-list">
               <li><strong>Cold foods:</strong> Keep below 40°F (4°C)</li>
               <li><strong>Hot foods:</strong> Keep above 140°F (60°C)</li>
               <li><strong>Transport:</strong> Use insulated containers</li>
               <li><strong>Time limit:</strong> Distribute within 2 hours</li>
             </ul>
           </div>
-          <div style={{ padding: '24px', backgroundColor: '#e8f2ec', borderRadius: '12px', border: '1px solid #daeded' }}>
-            <h3 style={{ color: '#0e1a13', fontSize: '20px', fontWeight: '700', marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <div className="ngo-storage-card">
+            <h3 className="ngo-storage-title">
               📦 Non-Perishable Foods
             </h3>
-            <ul style={{ color: '#51946c', fontSize: '16px', lineHeight: '1.6', paddingLeft: '20px' }}>
+            <ul className="ngo-storage-list">
               <li><strong>Storage:</strong> Cool, dry place</li>
               <li><strong>Containers:</strong> Sealed, pest-proof</li>
               <li><strong>Rotation:</strong> First in, first out (FIFO)</li>
@@ -337,24 +212,24 @@ const NGO = () => {
             </ul>
           </div>
         </div>
-        <div style={{ marginTop: '24px', padding: '24px', backgroundColor: '#fff3cd', borderRadius: '8px', border: '1px solid #ffc107' }}>
-          <h3 style={{ color: '#856404', fontSize: '20px', fontWeight: '700', marginBottom: '16px' }}>⚠️ When to Reject Food</h3>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '16px' }}>
-            <ul style={{ color: '#856404', fontSize: '16px', lineHeight: '1.6', paddingLeft: '20px' }}>
+        <div className="ngo-warning-card">
+          <h3 className="ngo-warning-title">⚠️ When to Reject Food</h3>
+          <div className="ngo-warning-grid">
+            <ul className="ngo-warning-list">
               <li>Temperature abuse (danger zone 40-140°F)</li>
               <li>Visible spoilage or contamination</li>
               <li>Expired or unlabeled items</li>
             </ul>
-            <ul style={{ color: '#856404', fontSize: '16px', lineHeight: '1.6', paddingLeft: '20px' }}>
+            <ul className="ngo-warning-list">
               <li>Improper packaging or storage</li>
               <li>Strong odors or unusual appearance</li>
               <li>Cross-contamination risks</li>
             </ul>
           </div>
         </div>
-        <div style={{ marginTop: '24px', padding: '20px', backgroundColor: '#d1ecf1', borderRadius: '8px', border: '1px solid #bee5eb' }}>
-          <h4 style={{ color: '#0c5460', fontSize: '18px', fontWeight: '700', marginBottom: '12px' }}>🧼 Hygiene & Sanitization</h4>
-          <ul style={{ color: '#0c5460', fontSize: '16px', lineHeight: '1.6', paddingLeft: '20px' }}>
+        <div className="ngo-info-card">
+          <h4 className="ngo-info-title">🧼 Hygiene & Sanitization</h4>
+          <ul className="ngo-info-list">
             <li>Wash hands before and after handling food</li>
             <li>Use clean, sanitized containers and utensils</li>
             <li>Maintain clean transportation vehicles</li>
@@ -364,23 +239,15 @@ const NGO = () => {
       </div>
 
       {/* Volunteer Involvement Section */}
-      <div style={{ padding: '0 16px', marginBottom: '40px', backgroundColor: '#f8fbfa', borderRadius: '12px', border: '1px solid #daeded' }}>
-        <div style={{ padding: '32px 24px' }}>
-          <h2
-            style={{
-              color: '#0e1a13',
-              fontSize: '28px',
-              fontWeight: '700',
-              textAlign: 'center',
-              marginBottom: '32px'
-            }}
-          >
+      <div className="ngo-section-bg">
+        <div className="ngo-section-inner">
+          <h2 className="ngo-section-title">
             🤝 Volunteer Management
           </h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
-            <div style={{ padding: '24px', backgroundColor: 'white', borderRadius: '8px', border: '1px solid #daeded' }}>
-              <h3 style={{ color: '#0e1a13', fontSize: '20px', fontWeight: '700', marginBottom: '16px' }}>📝 Volunteer Tasks</h3>
-              <ul style={{ color: '#51946c', fontSize: '16px', lineHeight: '1.6', paddingLeft: '20px' }}>
+          <div className="ngo-volunteer-grid">
+            <div className="ngo-volunteer-card">
+              <h3 className="ngo-volunteer-title">📝 Volunteer Tasks</h3>
+              <ul className="ngo-volunteer-list">
                 <li>Food pickup coordination</li>
                 <li>Transportation and delivery</li>
                 <li>Food sorting and packaging</li>
@@ -389,9 +256,9 @@ const NGO = () => {
                 <li>Community outreach</li>
               </ul>
             </div>
-            <div style={{ padding: '24px', backgroundColor: 'white', borderRadius: '8px', border: '1px solid #daeded' }}>
-              <h3 style={{ color: '#0e1a13', fontSize: '20px', fontWeight: '700', marginBottom: '16px' }}>🎓 Training Requirements</h3>
-              <ul style={{ color: '#51946c', fontSize: '16px', lineHeight: '1.6', paddingLeft: '20px' }}>
+            <div className="ngo-volunteer-card">
+              <h3 className="ngo-volunteer-title">🎓 Training Requirements</h3>
+              <ul className="ngo-volunteer-list">
                 <li>Food safety and handling basics</li>
                 <li>Platform usage and communication</li>
                 <li>Emergency procedures</li>
@@ -401,24 +268,24 @@ const NGO = () => {
               </ul>
             </div>
           </div>
-          <div style={{ marginTop: '24px', padding: '20px', backgroundColor: '#e8f2ec', borderRadius: '8px', border: '1px solid #38e07b' }}>
-            <h4 style={{ color: '#0e1a13', fontSize: '18px', fontWeight: '700', marginBottom: '12px' }}>🛡️ Safety Rules for Volunteers</h4>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '16px' }}>
-              <ul style={{ color: '#51946c', fontSize: '16px', lineHeight: '1.6', paddingLeft: '20px' }}>
+          <div className="ngo-safety-card">
+            <h4 className="ngo-safety-title">🛡️ Safety Rules for Volunteers</h4>
+            <div className="ngo-safety-grid">
+              <ul className="ngo-safety-list">
                 <li>Always work in pairs for pickups</li>
                 <li>Wear appropriate protective equipment</li>
                 <li>Follow proper lifting techniques</li>
               </ul>
-              <ul style={{ color: '#51946c', fontSize: '16px', lineHeight: '1.6', paddingLeft: '20px' }}>
+              <ul className="ngo-safety-list">
                 <li>Report any safety concerns immediately</li>
                 <li>Maintain professional communication</li>
                 <li>Follow organization protocols</li>
               </ul>
             </div>
           </div>
-          <div style={{ marginTop: '24px', padding: '20px', backgroundColor: '#d1ecf1', borderRadius: '8px', border: '1px solid #bee5eb' }}>
-            <h4 style={{ color: '#0c5460', fontSize: '18px', fontWeight: '700', marginBottom: '12px' }}>⏰ Time Commitment & Coordination</h4>
-            <ul style={{ color: '#0c5460', fontSize: '16px', lineHeight: '1.6', paddingLeft: '20px' }}>
+          <div className="ngo-info-card">
+            <h4 className="ngo-info-title">⏰ Time Commitment & Coordination</h4>
+            <ul className="ngo-info-list">
               <li><strong>Typical pickup:</strong> 1-2 hours including travel</li>
               <li><strong>Distribution events:</strong> 2-4 hours</li>
               <li><strong>Training sessions:</strong> 2-3 hours initially</li>
@@ -430,151 +297,73 @@ const NGO = () => {
       </div>
 
       {/* How It Works Section */}
-      <div style={{ padding: '0 16px', marginBottom: '40px' }}>
-        <h2
-          style={{
-            color: '#0e1a13',
-            fontSize: '28px',
-            fontWeight: '700',
-            textAlign: 'center',
-            marginBottom: '32px'
-          }}
-        >
+      <div className="ngo-section">
+        <h2 className="ngo-section-title">
           📋 How It Works for NGOs
         </h2>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-          <div style={{ display: 'flex', gap: '24px', alignItems: 'center' }}>
-            <div
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                width: '60px',
-                height: '60px',
-                backgroundColor: '#38e07b',
-                borderRadius: '50%',
-                fontSize: '24px',
-                fontWeight: 'bold',
-                color: '#0e1a13',
-                flexShrink: 0
-              }}
-            >
+        <div className="ngo-steps-container">
+          <div className="ngo-step">
+            <div className="ngo-step-number">
               1
             </div>
             <div>
-              <h3 style={{ color: '#0e1a13', fontSize: '20px', fontWeight: '700', marginBottom: '8px' }}>
+              <h3 className="ngo-step-title">
                 Register Your NGO
               </h3>
-              <p style={{ color: '#51946c', fontSize: '16px', lineHeight: '1.6', margin: 0 }}>
+              <p className="ngo-step-description">
                 Create your NGO profile and provide information about your organization and service areas.
               </p>
             </div>
           </div>
-          <div style={{ display: 'flex', gap: '24px', alignItems: 'center' }}>
-            <div
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                width: '60px',
-                height: '60px',
-                backgroundColor: '#38e07b',
-                borderRadius: '50%',
-                fontSize: '24px',
-                fontWeight: 'bold',
-                color: '#0e1a13',
-                flexShrink: 0
-              }}
-            >
+          <div className="ngo-step">
+            <div className="ngo-step-number">
               2
             </div>
             <div>
-              <h3 style={{ color: '#0e1a13', fontSize: '20px', fontWeight: '700', marginBottom: '8px' }}>
+              <h3 className="ngo-step-title">
                 Browse Available Donations
               </h3>
-              <p style={{ color: '#51946c', fontSize: '16px', lineHeight: '1.6', margin: 0 }}>
+              <p className="ngo-step-description">
                 View food donations from restaurants in your area. Filter by food type, quantity, and pickup time.
               </p>
             </div>
           </div>
-          <div style={{ display: 'flex', gap: '24px', alignItems: 'center' }}>
-            <div
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                width: '60px',
-                height: '60px',
-                backgroundColor: '#38e07b',
-                borderRadius: '50%',
-                fontSize: '24px',
-                fontWeight: 'bold',
-                color: '#0e1a13',
-                flexShrink: 0
-              }}
-            >
+          <div className="ngo-step">
+            <div className="ngo-step-number">
               3
             </div>
             <div>
-              <h3 style={{ color: '#0e1a13', fontSize: '20px', fontWeight: '700', marginBottom: '8px' }}>
+              <h3 className="ngo-step-title">
                 Coordinate Pickup
               </h3>
-              <p style={{ color: '#51946c', fontSize: '16px', lineHeight: '1.6', margin: 0 }}>
+              <p className="ngo-step-description">
                 Contact restaurants to arrange pickup times and locations that work for both parties.
               </p>
             </div>
           </div>
-          <div style={{ display: 'flex', gap: '24px', alignItems: 'center' }}>
-            <div
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                width: '60px',
-                height: '60px',
-                backgroundColor: '#38e07b',
-                borderRadius: '50%',
-                fontSize: '24px',
-                fontWeight: 'bold',
-                color: '#0e1a13',
-                flexShrink: 0
-              }}
-            >
+          <div className="ngo-step">
+            <div className="ngo-step-number">
               4
             </div>
             <div>
-              <h3 style={{ color: '#0e1a13', fontSize: '20px', fontWeight: '700', marginBottom: '8px' }}>
+              <h3 className="ngo-step-title">
                 Distribute to Community
               </h3>
-              <p style={{ color: '#51946c', fontSize: '16px', lineHeight: '1.6', margin: 0 }}>
+              <p className="ngo-step-description">
                 Distribute the collected food to those in need in your community efficiently and safely.
               </p>
             </div>
           </div>
-          <div style={{ display: 'flex', gap: '24px', alignItems: 'center' }}>
-            <div
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                width: '60px',
-                height: '60px',
-                backgroundColor: '#38e07b',
-                borderRadius: '50%',
-                fontSize: '24px',
-                fontWeight: 'bold',
-                color: '#0e1a13',
-                flexShrink: 0
-              }}
-            >
+          <div className="ngo-step">
+            <div className="ngo-step-number">
               5
             </div>
             <div>
-              <h3 style={{ color: '#0e1a13', fontSize: '20px', fontWeight: '700', marginBottom: '8px' }}>
+              <h3 className="ngo-step-title">
                 Track Your Impact
               </h3>
-              <p style={{ color: '#51946c', fontSize: '16px', lineHeight: '1.6', margin: 0 }}>
-                Monitor your organization\'s impact through our dashboard and share success stories.
+              <p className="ngo-step-description">
+                Monitor your organization's impact through our dashboard and share success stories.
               </p>
             </div>
           </div>
@@ -582,44 +371,14 @@ const NGO = () => {
       </div>
 
       {/* CTA Section */}
-      <div style={{ textAlign: 'center', padding: '40px 16px' }}>
-        <h2
-          style={{
-            color: '#0e1a13',
-            fontSize: '24px',
-            fontWeight: '700',
-            marginBottom: '24px'
-          }}
-        >
+      <div className="ngo-cta-section">
+        <h2 className="ngo-cta-title">
           Ready to Expand Your Impact?
         </h2>
-        <p
-          style={{
-            color: '#51946c',
-            fontSize: '18px',
-            lineHeight: '1.6',
-            marginBottom: '32px'
-          }}
-        >
+        <p className="ngo-cta-description">
           Join NGOs already making a difference in their communities through food donations.
         </p>
-        <Link
-          to="/ngo-dashboard"
-          style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            padding: '16px 32px',
-            backgroundColor: '#38e07b',
-            color: '#0e1a13',
-            fontWeight: '700',
-            fontSize: '18px',
-            borderRadius: '8px',
-            textDecoration: 'none',
-            transition: 'background-color 0.3s'
-          }}
-          onMouseOver={(e) => e.target.style.backgroundColor = '#2bc066'}
-          onMouseOut={(e) => e.target.style.backgroundColor = '#38e07b'}
-        >
+        <Link to="/ngo-dashboard" className="ngo-cta-button">
           Start Collecting Donations
         </Link>
       </div>

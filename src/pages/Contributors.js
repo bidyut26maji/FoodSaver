@@ -239,7 +239,7 @@ const Contributors = () => {
 
             {/* --- Spinner from HTML --- */}
             {isLoading && (
-              <div id="spinner" style={{ display: 'flex' }}>
+              <div id="spinner">
                 <div className="spinner-circle"></div>
               </div>
             )}
@@ -249,17 +249,16 @@ const Contributors = () => {
 
             {/* --- Project Lead Card from HTML --- */}
             {projectLead && (
-              <div id="projectLeadContainer" style={{ display: 'flex', justifyContent: 'center', margin: '2rem 0' }}>
+              <div id="projectLeadContainer">
                 <div 
                   className="contributor special-lead" 
                   onClick={() => setSelectedContributor(projectLead)}
-                  style={{cursor: 'pointer'}}
                 >
                   <img src={projectLead.avatar} alt={projectLead.name} />
                   <a href={projectLead.links[0].url} target="_blank" rel="noopener noreferrer">
                     {projectLead.name}
                   </a>
-                  <p style={{ fontWeight: 600, color: '#ffd700' }}>🌟 {projectLead.role} 🌟</p>
+                  <p>🌟 {projectLead.role} 🌟</p>
                   <p>Contributions: {projectLead.commits} | PRs: {projectLead.prs}</p>
                 </div>
               </div>
@@ -288,13 +287,13 @@ const Contributors = () => {
         </section>
 
         {/* --- How to Contribute Section from HTML --- */}
-        <section className="contribute-section" style={{ padding: '50px 0', textAlign: 'center' }}>
-          <div className="container" style={{ maxWidth: '1200px', margin: 'auto' }}>
-            <div className="section-header" style={{ marginBottom: '40px' }}>
+        <section className="contribute-section">
+          <div className="container">
+            <div className="section-header">
               <h2>Want to Contribute?</h2>
               <p>Join our community and help improve FoodSaver</p>
             </div>
-            <div className="contribute-steps" style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '25px' }}>
+            <div className="contribute-steps">
               {/* Step cards */}
               {[
                 { icon: 'fas fa-clipboard-list', title: 'Create an Issue', desc: 'Start by creating an issue describing your change and wait for it to be assigned.' },
@@ -303,8 +302,8 @@ const Contributors = () => {
                 { icon: 'fas fa-code', title: 'Make Changes', desc: 'Implement your features or bug fixes following our coding standards.' },
                 { icon: 'fas fa-upload', title: 'Submit PR', desc: 'Create a pull request with a clear description of your changes for review.' }
               ].map(step => (
-                <div key={step.title} className="step-card" style={{ border: '1px solid #ccc', borderRadius: '8px', padding: '20px', width: '200px', textAlign: 'center' }}>
-                  <div className="step-icon" style={{ fontSize: '36px', marginBottom: '10px' }}><i className={step.icon}></i></div>
+                <div key={step.title} className="step-card">
+                  <div className="step-icon"><i className={step.icon}></i></div>
                   <h3>{step.title}</h3>
                   <p>{step.desc}</p>
                 </div>

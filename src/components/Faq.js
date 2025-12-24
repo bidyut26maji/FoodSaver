@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import "./Faq.css";
 
 const faqs = [
   {
@@ -37,67 +38,26 @@ const Faq = () => {
   };
 
   return (
-    <section
-      style={{
-        padding: "60px 20px",
-        backgroundColor: "#f8fbfa",
-        borderRadius: "12px",
-        margin: "60px auto",
-        maxWidth: "900px",
-      }}
-    >
-      <h2
-        style={{
-          textAlign: "center",
-          fontSize: "2rem",
-          fontWeight: "800",
-          color: "#0e1a13",
-          marginBottom: "40px",
-        }}
-      >
+    <section className="faq-section">
+      <h2 className="faq-title">
         Frequently Asked Questions
       </h2>
 
-      <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+      <div className="faq-list">
         {faqs.map((faq, index) => (
           <div
             key={index}
-            style={{
-              backgroundColor: "#e8f2ec",
-              borderRadius: "12px",
-              padding: "20px 24px",
-              boxShadow: "0 4px 8px rgba(0,0,0,0.05)",
-              transition: "0.3s ease",
-              cursor: "pointer",
-            }}
+            className="faq-item"
             onClick={() => toggleFAQ(index)}
           >
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-              }}
-            >
-              <h3
-                style={{
-                  color: "#0e1a13",
-                  fontSize: "18px",
-                  fontWeight: "700",
-                  margin: 0,
-                }}
-              >
+            <div className="faq-question-wrapper">
+              <h3 className="faq-question">
                 {faq.question}
               </h3>
               <motion.span
                 animate={{ rotate: activeIndex === index ? 45 : 0 }}
                 transition={{ duration: 0.3 }}
-                style={{
-                  fontSize: "24px",
-                  color: "#38e07b",
-                  fontWeight: "bold",
-                  lineHeight: "1",
-                }}
+                className="faq-icon"
               >
                 +
               </motion.span>
@@ -111,14 +71,7 @@ const Faq = () => {
                   exit={{ opacity: 0, height: 0 }}
                   transition={{ duration: 0.4, ease: "easeInOut" }}
                 >
-                  <p
-                    style={{
-                      color: "#51946c",
-                      marginTop: "12px",
-                      lineHeight: "1.6",
-                      fontSize: "16px",
-                    }}
-                  >
+                  <p className="faq-answer">
                     {faq.answer}
                   </p>
                 </motion.div>

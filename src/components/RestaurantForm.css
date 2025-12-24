@@ -3,7 +3,7 @@
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  background: #f8fbfa;
+  background: var(--bg-primary);
   min-height: 100vh;
 }
 
@@ -15,21 +15,22 @@
 .form-header h1 {
   font-size: 2rem;
   font-weight: 700;
-  color: #0b0f0c;
+  color: var(--text-primary);
   margin-bottom: 8px;
 }
 
 .form-header p {
-  color: #51946c;
+  color: var(--text-tertiary);
   font-size: 1rem;
 }
 
 /* Form Layout */
 .restaurant-form {
-  background: white;
+  background: var(--bg-card);
   border-radius: 12px;
   padding: 32px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-default);
 }
 
 .form-grid {
@@ -58,7 +59,7 @@
 
 .form-group label {
   font-weight: 600;
-  color: #0b0f0c;
+  color: var(--text-primary);
   font-size: 0.95rem;
 }
 
@@ -67,27 +68,28 @@
 .form-group select,
 .form-group textarea {
   padding: 12px 16px;
-  border: 2px solid #daeded;
+  border: 2px solid var(--border-default);
   border-radius: 8px;
   font-size: 1rem;
   transition: all 0.3s ease;
-  background: white;
+  background: var(--bg-input);
+  color: var(--text-primary);
 }
 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #38e07b;
-  box-shadow: 0 0 0 3px rgba(56, 224, 123, 0.1);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--status-success-bg);
   transform: translateY(-1px);
 }
 
 .form-group input.error,
 .form-group select.error,
 .form-group textarea.error {
-  border-color: #e74c3c;
-  box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+  border-color: var(--status-error-text);
+  box-shadow: 0 0 0 3px var(--status-error-bg);
 }
 
 /* Quantity Input */
@@ -121,19 +123,19 @@
   align-items: center;
   gap: 8px;
   padding: 12px 20px;
-  background: #e8f2ec;
-  border: 2px dashed #38e07b;
+  background: var(--status-success-bg);
+  border: 2px dashed var(--color-primary);
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
   font-weight: 500;
-  color: #0b0f0c;
+  color: var(--text-primary);
   width: fit-content;
 }
 
 .file-label:hover {
-  background: #38e07b;
-  color: white;
+  background: var(--color-primary);
+  color: var(--text-inverse);
   transform: translateY(-2px);
 }
 
@@ -145,7 +147,7 @@
   max-width: 200px;
   max-height: 150px;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-md);
   animation: fadeIn 0.3s ease;
 }
 
@@ -161,7 +163,7 @@
   gap: 20px;
   margin: 24px 0;
   padding: 20px;
-  background: #f8fbfa;
+  background: var(--bg-secondary);
   border-radius: 8px;
 }
 
@@ -184,7 +186,7 @@
   gap: 12px;
   cursor: pointer;
   font-weight: 500;
-  color: #0b0f0c;
+  color: var(--text-primary);
 }
 
 .toggle-input {
@@ -195,7 +197,7 @@
   position: relative;
   width: 50px;
   height: 24px;
-  background: #daeded;
+  background: var(--border-default);
   border-radius: 24px;
   transition: all 0.3s ease;
 }
@@ -207,14 +209,14 @@
   left: 2px;
   width: 20px;
   height: 20px;
-  background: white;
+  background: var(--text-inverse);
   border-radius: 50%;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-sm);
 }
 
 .toggle-input:checked + .toggle-slider {
-  background: #38e07b;
+  background: var(--color-primary);
 }
 
 .toggle-input:checked + .toggle-slider::before {
@@ -233,7 +235,7 @@
   gap: 12px;
   cursor: pointer;
   font-weight: 500;
-  color: #0b0f0c;
+  color: var(--text-primary);
 }
 
 .checkbox-label input {
@@ -243,15 +245,15 @@
 .checkmark {
   width: 20px;
   height: 20px;
-  border: 2px solid #daeded;
+  border: 2px solid var(--border-default);
   border-radius: 4px;
   position: relative;
   transition: all 0.3s ease;
 }
 
 .checkbox-label input:checked + .checkmark {
-  background: #38e07b;
-  border-color: #38e07b;
+  background: var(--color-primary);
+  border-color: var(--color-primary);
 }
 
 .checkbox-label input:checked + .checkmark::after {
@@ -260,7 +262,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: var(--text-inverse);
   font-weight: bold;
   font-size: 12px;
 }
@@ -272,7 +274,7 @@
   gap: 16px;
   margin-top: 32px;
   padding-top: 24px;
-  border-top: 1px solid #daeded;
+  border-top: 1px solid var(--border-default);
 }
 
 @media (min-width: 768px) {
@@ -307,14 +309,14 @@
 }
 
 .btn-primary {
-  background: #38e07b;
-  color: #0b0f0c;
+  background: var(--color-primary);
+  color: var(--text-primary);
 }
 
 .btn-primary:hover:not(:disabled) {
-  background: #2bc965;
+  background: var(--color-primary-hover);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(56, 224, 123, 0.3);
+  box-shadow: var(--shadow-glow);
 }
 
 .btn-primary:disabled {
@@ -324,13 +326,13 @@
 }
 
 .btn-secondary {
-  background: #e8f2ec;
-  color: #0b0f0c;
-  border: 1px solid #daeded;
+  background: var(--status-success-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border-default);
 }
 
 .btn-secondary:hover {
-  background: #daeded;
+  background: var(--border-default);
   transform: translateY(-1px);
 }
 
@@ -360,7 +362,7 @@
 
 /* Error Messages */
 .error-message {
-  color: #e74c3c;
+  color: var(--status-error-text);
   font-size: 0.875rem;
   font-weight: 500;
   display: flex;
@@ -380,15 +382,15 @@
   justify-content: center;
   min-height: 100vh;
   padding: 20px;
-  background: #f8fbfa;
+  background: var(--bg-secondary);
 }
 
 .success-card {
-  background: white;
+  background: var(--bg-card);
   border-radius: 16px;
   padding: 48px 32px;
   text-align: center;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-xl);
   max-width: 500px;
   width: 100%;
   animation: slideUp 0.5s ease;
@@ -426,12 +428,12 @@
 .success-card h2 {
   font-size: 1.75rem;
   font-weight: 700;
-  color: #0b0f0c;
+  color: var(--text-primary);
   margin-bottom: 16px;
 }
 
 .success-card p {
-  color: #51946c;
+  color: var(--text-secondary);
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 32px;
@@ -480,7 +482,7 @@
 .btn-primary:focus,
 .btn-secondary:focus,
 .file-label:focus {
-  outline: 2px solid #38e07b;
+  outline: 2px solid var(--color-primary);
   outline-offset: 2px;
 }
 

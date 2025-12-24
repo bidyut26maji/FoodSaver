@@ -1,30 +1,10 @@
 /* Import a clean, Apple-like font */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-/* --- Design System (Variables) --- */
-:root {
-  --primary-green-light: #34D399;
-  --primary-green-dark: #10B981;
-  --text-dark: #1f2937;
-  --text-light: #6b7281;
-  --bg-light: #f9fafb;
-  --card-bg: #ffffff;
-  --border-color: #e5e7eb;
-  
-  --btn-red: #ef4444;
-  --btn-blue: #3b82f6;
-  --btn-teal: #14b8a6;
-  --btn-gray: #4b5563;
-
-  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  --shadow-md: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 12px 0 rgba(0, 0, 0, 0.04);
-  --shadow-lg: 0 10px 20px 0 rgba(0, 0, 0, 0.05), 0 15px 30px 0 rgba(0, 0, 0, 0.07);
-}
-
 /* --- Base Styles --- */
 .contribute-wrapper {
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  background-color: var(--bg-light);
+  background-color: var(--bg-primary);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,19 +29,19 @@
   justify-content: center;
   font-size: 2.75rem;
   font-weight: 700;
-  color: var(--text-dark);
+  color: var(--text-primary);
   margin-bottom: 0.75rem;
 }
 
 .logo-icon {
-  color: var(--primary-green-dark);
+  color: var(--color-primary);
   margin-right: 0.75rem;
   font-size: 2.5rem;
 }
 
 .contribute-header .subtitle {
   font-size: 1.15rem;
-  color: var(--text-light);
+  color: var(--text-secondary);
   max-width: 550px;
   margin: 0 auto;
   line-height: 1.6;
@@ -76,13 +56,13 @@
 .mission-section h2 {
   font-size: 2.25rem;
   font-weight: 600;
-  color: var(--text-dark);
+  color: var(--text-primary);
   margin-bottom: 0.75rem;
 }
 
 .mission-section p {
   font-size: 1.1rem;
-  color: var(--text-light);
+  color: var(--text-secondary);
   max-width: 550px;
   margin: 0 auto 2rem auto;
   line-height: 1.6;
@@ -100,7 +80,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.6rem; /* Space between icon and text */
+  gap: 0.6rem;
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   font-weight: 500;
@@ -108,7 +88,7 @@
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  color: white;
+  color: var(--text-inverse);
   box-shadow: var(--shadow-sm);
 }
 
@@ -117,10 +97,10 @@
   filter: brightness(1.1);
 }
 
-.btn-donate { background-color: var(--btn-red); }
-.btn-support { background-color: var(--btn-blue); }
-.btn-team { background-color: var(--btn-teal); }
-.btn-open-source { background-color: var(--btn-gray); }
+.btn-donate { background-color: var(--status-error-text); }
+.btn-support { background-color: var(--status-info-text); }
+.btn-team { background-color: var(--text-tertiary); }
+.btn-open-source { background-color: var(--text-secondary); }
 
 
 /* --- Partner CTA Section --- */
@@ -164,7 +144,7 @@
   gap: 0.75rem;
   font-size: 1.15rem; /* Bigger font */
   font-weight: 600;
-  color: white;
+  color: var(--text-inverse);
   padding: 1.25rem 2.5rem; /* Much larger padding */
   border: none;
   border-radius: 12px; /* Softer radius */
@@ -174,14 +154,14 @@
   background-image: linear-gradient(to right, var(--primary-green-light), var(--primary-green-dark));
   
   /* "Featurefull" shadow */
-  box-shadow: 0 5px 15px 0 rgba(16, 185, 129, 0.3);
+  box-shadow: var(--shadow-primary-md);
   
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .btn-verify:hover {
   transform: scale(1.05) translateY(-3px); /* Pop effect */
-  box-shadow: 0 8px 25px 0 rgba(16, 185, 129, 0.4);
+  box-shadow: var(--shadow-primary-lg);
 }
 
 .btn-verify svg {

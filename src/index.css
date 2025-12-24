@@ -1,3 +1,159 @@
+/* ===============================================
+   THEME SYSTEM - CSS VARIABLES
+   =============================================== */
+
+/* Dark Mode (Default) */
+:root {
+  /* Brand Colors - Consistent across themes */
+  --color-primary: #38e07b;
+  --color-primary-dark: #2bc965;
+  --color-primary-light: #4eff8f;
+  --color-primary-hover: #2bc965;
+  
+  /* Background Colors - Dark Mode */
+  --bg-primary: #0b0f0c;
+  --bg-secondary: #0e1a13;
+  --bg-tertiary: #1a2820;
+  --bg-card: #1e2a24;
+  --bg-card-hover: #243029;
+  --bg-input: #1a2820;
+  --bg-overlay: rgba(11, 15, 12, 0.4) 0%, rgba(11, 15, 12, 0.7) 100%;
+  
+  /* Text Colors - Dark Mode */
+  --text-primary: #f8fbfa;
+  --text-secondary: #b8c9bf;
+  --text-tertiary: #51946c;
+  --text-muted: #6b8576;
+  --text-inverse: #0b0f0c;
+  
+  /* Border & Divider Colors */
+  --border-default: #2d3d35;
+  --border-light: #3d4d45;
+  --border-focus: #38e07b;
+  
+  /* Shadow & Elevation */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 25px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.6);
+  --shadow-glow: 0 4px 12px rgba(56, 224, 123, 0.3);
+  --shadow-text: 0 2px 8px rgba(0, 0, 0, 0.4);
+  
+  /* Primary Color Shadows */
+  --shadow-primary-md: 0 10px 40px rgba(56, 224, 123, 0.3);
+  --shadow-primary-lg: 0 20px 60px rgba(56, 224, 123, 0.5);
+  
+  /* Status Colors - Dark Mode */
+  --status-success-bg: #1a3d2b;
+  --status-success-text: #38e07b;
+  --status-success: #38e07b;
+  --status-warning-bg: #3d2f1a;
+  --status-warning-text: #f5a623;
+  --status-warning-border: #f5a623;
+  --status-warning: #f5a623;
+  --status-error-bg: #3d1a1a;
+  --status-error-text: #ff6b6b;
+  --status-error: #ff6b6b;
+  --status-info-bg: #1a2d3d;
+  --status-info-text: #4a9eff;
+  
+  /* Additional Colors */
+  --modal-overlay: rgba(0, 0, 0, 0.7);
+  --badge-gold: #ffd700;
+  --badge-silver: #c0c0c0;
+  --badge-bronze: #cd7f32;
+  
+  /* Chart & Data Visualization */
+  --chart-bg: #1e2a24;
+  --chart-grid: #2d3d35;
+  --chart-text: #b8c9bf;
+  
+  /* Glassmorphism Effects */
+  --glass-bg: rgba(30, 42, 36, 0.7);
+  --glass-border: rgba(56, 224, 123, 0.2);
+  --glass-blur: blur(12px);
+}
+
+/* Light Mode Theme Override */
+[data-theme="light"] {
+  /* Background Colors - Light Mode */
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f1f5f9;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f8fafc;
+  --bg-input: #ffffff;
+  --bg-overlay: rgba(248, 250, 252, 0.3) 0%, rgba(248, 250, 252, 0.6) 100%;
+  
+  /* Text Colors - Light Mode */
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-tertiary: #0f766e;
+  --text-muted: #94a3b8;
+  --text-inverse: #ffffff;
+  
+  /* Border & Divider Colors - Light Mode */
+  --border-default: #e2e8f0;
+  --border-light: #f1f5f9;
+  --border-focus: #38e07b;
+  
+  /* Shadow & Elevation - Light Mode */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.15);
+  --shadow-glow: 0 4px 12px rgba(56, 224, 123, 0.2);
+  --shadow-text: 0 1px 4px rgba(0, 0, 0, 0.15);
+  
+  /* Primary Color Shadows - Light Mode */
+  --shadow-primary-md: 0 10px 40px rgba(56, 224, 123, 0.3);
+  --shadow-primary-lg: 0 20px 60px rgba(56, 224, 123, 0.4);
+  
+  /* Status Colors - Light Mode */
+  --status-success-bg: #e8f7ef;
+  --status-success-text: #0d9a6d;
+  --status-success: #0d9a6d;
+  --status-warning-bg: #fff8e6;
+  --status-warning-text: #d97706;
+  --status-warning-border: #ffc107;
+  --status-warning: #d97706;
+  --status-error-bg: #ffeaea;
+  --status-error-text: #dc2626;
+  --status-error: #dc2626;
+  --status-info-bg: #e0f2fe;
+  --status-info-text: #0284c7;
+  
+  /* Additional Colors - Light Mode */
+  --modal-overlay: rgba(0, 0, 0, 0.5);
+  --badge-gold: #ffd700;
+  --badge-silver: #c0c0c0;
+  --badge-bronze: #cd7f32;
+  
+  /* Chart & Data Visualization - Light Mode */
+  --chart-bg: #ffffff;
+  --chart-grid: #e2e8f0;
+  --chart-text: #475569;
+  
+  /* Glassmorphism Effects - Light Mode */
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(56, 224, 123, 0.3);
+  --glass-blur: blur(12px);
+}
+
+/* ===============================================
+   BASE STYLES
+   =============================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +161,41 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* ===============================================
+   ACCESSIBILITY & PERFORMANCE
+   =============================================== */
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  :root {
+    --border-default: #38e07b;
+    --text-secondary: var(--text-primary);
+  }
+}
+
+/* Focus Visible for Accessibility */
+*:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
 }
