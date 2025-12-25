@@ -56,8 +56,8 @@ const AdminDashboard = () => {
     datasets: [{
       label: 'Food Saved (kg)',
       data: [1200, 1900, 2400, 3100, 4500, 5200],
-      backgroundColor: '#38e07b',
-      borderColor: '#2bc066',
+      backgroundColor: getComputedStyle(document.documentElement).getPropertyValue('--color-primary').trim() || '#38e07b',
+      borderColor: getComputedStyle(document.documentElement).getPropertyValue('--color-primary-dark').trim() || '#2bc066',
       borderWidth: 1
     }]
   };
@@ -66,7 +66,12 @@ const AdminDashboard = () => {
     labels: ['Restaurants', 'NGOs', 'Caterers', 'Bakeries'],
     datasets: [{
       data: [42, 28, 12, 8],
-      backgroundColor: ['#38e07b', '#51946c', '#94e0b2', '#7bcc9b']
+      backgroundColor: [
+        getComputedStyle(document.documentElement).getPropertyValue('--color-primary').trim() || '#38e07b',
+        getComputedStyle(document.documentElement).getPropertyValue('--text-tertiary').trim() || '#51946c',
+        getComputedStyle(document.documentElement).getPropertyValue('--color-primary-hover').trim() || '#94e0b2',
+        getComputedStyle(document.documentElement).getPropertyValue('--color-primary-light').trim() || '#7bcc9b'
+      ]
     }]
   };
 
@@ -100,25 +105,25 @@ const AdminDashboard = () => {
           title="Total Organizations"
           value={stats.totalOrgs || 0}
           icon="🏢"
-          color="#38e07b"
+          variant="primary"
         />
         <StatCard
           title="Food Saved"
           value={`${(stats.totalKg || 0).toLocaleString()} kg`}
           icon="♻️"
-          color="#51946c"
+          variant="success"
         />
         <StatCard
           title="Meals Distributed"
           value={`${(stats.meals || 0).toLocaleString()}`}
           icon="🍲"
-          color="#94e0b2"
+          variant="info"
         />
         <StatCard
           title="Active Partnerships"
           value={stats.activePartnerships || 0}
           icon="🤝"
-          color="#7bcc9b"
+          variant="secondary"
         />
       </div>
 
@@ -223,9 +228,9 @@ const AdminDashboard = () => {
 };
 
 // 🔲 Reusable Stat Card
-const StatCard = ({ title, value, icon, color }) => (
-  <div className="stat-card" style={{ background: `linear-gradient(135deg, ${color}20, ${color}10)` }}>
-    <div className="stat-icon" style={{ background: color, color: 'white' }}>
+const StatCard = ({ title, value, icon, variant = "primary" }) => (
+  <div className={`stat-card stat-card-${variant}`}>
+    <div className={`stat-icon stat-icon-${variant}`}>
       {icon}
     </div>
     <div>

@@ -112,7 +112,7 @@ const NGODashboard = () => {
         <StatCard title="Total Meals Received" value={stats.totalMealsReceived} icon="🍲" />
         <StatCard title="Food Saved" value={`${stats.totalKgReceived} kg`} icon="♻️" />
         <StatCard title="Active Restaurants" value={stats.activeRestaurants} icon="🏢" />
-        <StatCard title="Pending Pickups" value={stats.pendingPickups} icon="⏳" color="#f5a623" />
+        <StatCard title="Pending Pickups" value={stats.pendingPickups} icon="⏳" variant="warning" />
       </div>
 
       {/* Charts */}
@@ -125,8 +125,8 @@ const NGODashboard = () => {
               datasets: [{
                 label: 'Food Received (kg)',
                 data: [800, 950, 1200, 1400, 1600, 1800],
-                backgroundColor: '#38e07b',
-                borderColor: '#2bc066',
+                backgroundColor: getComputedStyle(document.documentElement).getPropertyValue('--color-primary').trim() || '#38e07b',
+                borderColor: getComputedStyle(document.documentElement).getPropertyValue('--color-primary-dark').trim() || '#2bc066',
                 borderWidth: 1
               }]
             }}
@@ -301,9 +301,9 @@ const NGODashboard = () => {
 }
 
 // 🔲 Reusable Stat Card
-const StatCard = ({ title, value, icon, color = "#38e07b" }) => (
-  <div className="stat-card" style={{ background: `linear-gradient(135deg, ${color}20, ${color}10)` }}>
-    <div className="stat-icon" style={{ background: color, color: 'white' }}>
+const StatCard = ({ title, value, icon, variant = "primary" }) => (
+  <div className={`stat-card stat-card-${variant}`}>
+    <div className={`stat-icon stat-icon-${variant}`}>
       {icon}
     </div>
     <div>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import ThemeToggle from './ThemeToggle';
 
 const Header = () => {
   const location = useLocation();
@@ -87,6 +88,9 @@ const Header = () => {
           </Link>
         </nav>
 
+        {/* Theme Toggle */}
+        <ThemeToggle />
+
         {/* CTA Button */}
         <Link to="/registration" className="cta-button">
           <span className="cta-text">Get Started</span>
@@ -122,6 +126,12 @@ const Header = () => {
         <Link className={`mobile-nav-link ${isActive('/contact')}`} to="/contact">
           Contact
         </Link>
+        
+        {/* Theme Toggle in Mobile Menu */}
+        <div style={{ display: 'flex', justifyContent: 'center', padding: '8px 0' }}>
+          <ThemeToggle />
+        </div>
+        
         <Link to="/registration" className="mobile-cta-button">
           Get Started
         </Link>

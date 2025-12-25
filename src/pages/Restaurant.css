@@ -1,0 +1,585 @@
+/* Restaurant Page Styles */
+
+/* Page Container */
+.restaurant-page {
+  padding: 12px 16px;
+}
+
+/* Back Button */
+.restaurant-back-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  background: var(--color-primary);
+  color: var(--text-inverse);
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-md);
+}
+
+.restaurant-back-btn:hover {
+  background: var(--color-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Hero Section */
+.restaurant-hero {
+  display: flex;
+  min-height: 400px;
+  flex-direction: column;
+  gap: 24px;
+  background-image: linear-gradient(var(--bg-overlay), var(--bg-overlay)), 
+    url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  margin-bottom: 40px;
+}
+
+.restaurant-hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: center;
+}
+
+.restaurant-hero-title {
+  color: var(--text-inverse);
+  font-size: 2.5rem;
+  font-weight: 900;
+  line-height: 1.25;
+  letter-spacing: -0.033em;
+}
+
+.restaurant-hero-subtitle {
+  color: var(--text-inverse);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  opacity: 0.95;
+}
+
+/* Benefits Section */
+.restaurant-benefits {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.restaurant-section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 48px;
+  color: var(--text-primary);
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+}
+
+.benefit-card {
+  background: var(--bg-card);
+  padding: 32px;
+  border-radius: 16px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-default);
+}
+
+.benefit-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-primary);
+}
+
+.benefit-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.benefit-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--text-primary);
+}
+
+.benefit-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+/* How It Works Section */
+.restaurant-how-it-works {
+  padding: 60px 20px;
+  background: var(--bg-secondary);
+}
+
+.steps-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 24px;
+  background: var(--bg-card);
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-default);
+  transition: all 0.3s ease;
+}
+
+.step-item:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-primary);
+}
+
+.step-number {
+  min-width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--color-primary), var(--text-tertiary));
+  color: var(--text-inverse);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.step-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+
+.step-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+/* Call to Action */
+.restaurant-cta {
+  padding: 80px 20px;
+  text-align: center;
+  background: var(--bg-primary);
+}
+
+.cta-content h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+}
+
+.cta-content p {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  margin-bottom: 32px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  padding: 16px 32px;
+  background: var(--color-primary);
+  color: var(--text-inverse);
+  font-size: 1.125rem;
+  font-weight: 600;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-md);
+}
+
+.cta-btn-primary:hover {
+  background: var(--color-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.cta-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  padding: 16px 32px;
+  background: transparent;
+  color: var(--text-primary);
+  font-size: 1.125rem;
+  font-weight: 600;
+  border-radius: 12px;
+  border: 2px solid var(--border-default);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cta-btn-secondary:hover {
+  border-color: var(--color-primary);
+  background: var(--bg-card);
+  transform: translateY(-2px);
+}
+
+/* Benefits Section */
+.restaurant-benefits-section {
+  padding: 0 16px;
+  margin-bottom: 40px;
+}
+
+.restaurant-section-heading {
+  color: var(--text-primary);
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.restaurant-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.restaurant-benefit-card {
+  padding: 20px;
+  background-color: var(--status-success-bg);
+  border-radius: 8px;
+  border: 1px solid var(--border-default);
+}
+
+.restaurant-benefit-text {
+  color: var(--text-primary);
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Features Section */
+.restaurant-features-section {
+  padding: 0 16px;
+  margin-bottom: 40px;
+}
+
+.restaurant-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+.restaurant-feature-card {
+  padding: 24px;
+  background-color: var(--bg-secondary);
+  border-radius: 12px;
+  border: 1px solid var(--border-default);
+  text-align: center;
+}
+
+.restaurant-feature-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.restaurant-feature-title {
+  color: var(--text-primary);
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.restaurant-feature-desc {
+  color: var(--text-secondary);
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Instructions Section */
+.restaurant-instructions {
+  padding: 0 16px;
+  margin-bottom: 40px;
+  background-color: var(--bg-secondary);
+  border-radius: 12px;
+  border: 1px solid var(--border-default);
+}
+
+.restaurant-instructions-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.restaurant-instruction-card {
+  padding: 24px;
+  background-color: var(--bg-card);
+  border-radius: 8px;
+  border: 1px solid var(--border-default);
+}
+
+.restaurant-instruction-title {
+  color: var(--text-primary);
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.restaurant-instruction-list {
+  color: var(--text-secondary);
+  font-size: 16px;
+  line-height: 1.6;
+  padding-left: 20px;
+}
+
+.restaurant-dos-donts {
+  margin-top: 24px;
+  padding: 20px;
+  background-color: var(--status-success-bg);
+  border-radius: 8px;
+  border: 1px solid var(--color-primary);
+}
+
+.restaurant-dos-donts h4 {
+  color: var(--text-primary);
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.restaurant-dos-donts ul {
+  color: var(--text-secondary);
+  font-size: 16px;
+  line-height: 1.6;
+  padding-left: 20px;
+  margin-bottom: 16px;
+}
+
+.restaurant-dos-donts ul:last-child {
+  margin-bottom: 0;
+}
+
+/* Guidelines Section */
+.restaurant-guidelines {
+  padding: 0 16px;
+  margin-bottom: 40px;
+}
+
+.restaurant-guidelines-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.restaurant-guideline-card {
+  padding: 24px;
+  background-color: var(--status-success-bg);
+  border-radius: 12px;
+  border: 1px solid var(--border-default);
+}
+
+.restaurant-guideline-title {
+  color: var(--text-primary);
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.restaurant-guideline-list {
+  color: var(--text-secondary);
+  font-size: 16px;
+  line-height: 1.6;
+  padding-left: 20px;
+}
+
+/* Not Accepted Section */
+.restaurant-not-accepted {
+  margin-top: 24px;
+  padding: 24px;
+  background-color: var(--status-warning-bg);
+  border-radius: 8px;
+  border: 1px solid var(--status-warning-border);
+}
+
+.restaurant-not-accepted h3 {
+  color: var(--status-warning-text);
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.restaurant-not-accepted ul {
+  color: var(--status-warning-text);
+  font-size: 16px;
+  line-height: 1.6;
+  padding-left: 20px;
+}
+
+/* Steps Section */
+.restaurant-steps-section {
+  padding: 0 16px;
+  margin-bottom: 40px;
+}
+
+.restaurant-steps-grid {
+  display: grid;
+  gap: 24px;
+}
+
+.restaurant-step-card {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 24px;
+  background-color: var(--bg-card);
+  border-radius: 12px;
+  border: 1px solid var(--border-default);
+}
+
+.restaurant-step-icon {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-primary);
+  color: var(--text-inverse);
+  font-size: 24px;
+  font-weight: 700;
+  border-radius: 50%;
+}
+
+.restaurant-step-content h3 {
+  color: var(--text-primary);
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.restaurant-step-content p {
+  color: var(--text-secondary);
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* FAQs Section */
+.restaurant-faqs-section {
+  padding: 0 16px;
+  margin-bottom: 40px;
+}
+
+.restaurant-faq-text {
+  color: var(--text-secondary);
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+/* CTA Buttons */
+.restaurant-cta-primary {
+  padding: 16px 32px;
+  background-color: var(--color-primary);
+  color: var(--text-primary);
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-md);
+}
+
+.restaurant-cta-primary:hover {
+  background-color: var(--color-primary-hover);
+  box-shadow: var(--shadow-lg);
+}
+
+.restaurant-cta-secondary {
+  padding: 16px 32px;
+  background-color: var(--status-success-bg);
+  color: var(--text-primary);
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 8px;
+  border: 2px solid var(--color-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.restaurant-cta-secondary:hover {
+  background-color: var(--color-primary);
+  color: var(--text-primary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .restaurant-hero {
+    min-height: 300px;
+  }
+
+  .restaurant-hero-title {
+    font-size: 2rem;
+  }
+
+  .restaurant-hero-subtitle {
+    font-size: 0.875rem;
+  }
+
+  .restaurant-section-title {
+    font-size: 1.75rem;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .step-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cta-content h2 {
+    font-size: 2rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .restaurant-step-card {
+    flex-direction: column;
+    text-align: center;  }
+}

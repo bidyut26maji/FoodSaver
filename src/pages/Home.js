@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react'; // Added useEffect
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion'; // Added missing framer-motion import
+import { motion } from 'framer-motion';
+import './Home.css';
 
 // --- Inlined useTypewriter Hook ---
 // This hook provides the typing animation text
@@ -173,66 +174,24 @@ const Home = () => {
   ];
 
   return (
-    <div
-      style={{
-        minHeight: "100vh",
-        background: "linear-gradient(to bottom, #0a0a0a, #1a1a1a)",
-        color: "white",
-        overflowX: "hidden",
-      }}
-    >
+    <div className="home-page">
       {/* Animated Background */}
-      <div
-        style={{
-          position: "fixed",
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          overflow: "hidden",
-          pointerEvents: "none",
-        }}
-      >
+      <div className="home-bg">
         {/* Grid Pattern */}
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            backgroundImage:
-              "linear-gradient(rgba(16,185,129,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(16,185,129,0.1) 1px, transparent 1px)",
-            backgroundSize: "100px 100px",
-            opacity: 0.3,
-          }}
-        />
+        <div className="home-bg-grid" />
 
         {/* Floating Orbs */}
         {[...Array(8)].map((_, i) => (
           <motion.div
             key={i}
             initial={{
-              x:
-                Math.random() *
-                (typeof window !== "undefined"
-                  ? window.innerWidth
-                  : 1000),
-              y:
-                Math.random() *
-                (typeof window !== "undefined"
-                  ? window.innerHeight
-                  : 1000),
+              x: Math.random() * (typeof window !== "undefined" ? window.innerWidth : 1000),
+              y: Math.random() * (typeof window !== "undefined" ? window.innerHeight : 1000),
               scale: Math.random() * 0.5 + 0.5,
             }}
             animate={{
-              x:
-                Math.random() *
-                (typeof window !== "undefined"
-                  ? window.innerWidth
-                  : 1000),
-              y:
-                Math.random() *
-                (typeof window !== "undefined"
-                  ? window.innerHeight
-                  : 1000),
+              x: Math.random() * (typeof window !== "undefined" ? window.innerWidth : 1000),
+              y: Math.random() * (typeof window !== "undefined" ? window.innerHeight : 1000),
               scale: Math.random() * 0.5 + 0.5,
             }}
             transition={{
@@ -245,57 +204,28 @@ const Home = () => {
               width: Math.random() * 300 + 100 + "px",
               height: Math.random() * 300 + 100 + "px",
               borderRadius: "50%",
-              background: `radial-gradient(circle, rgba(16,185,129,${
-                Math.random() * 0.2 + 0.1
-              }), transparent)`,
+              background: `radial-gradient(circle, rgba(56, 224, 123, ${Math.random() * 0.2 + 0.1}), transparent)`,
               filter: "blur(40px)",
             }}
           />
         ))}
       </div>
 
-      <div
-        style={{
-          position: "relative",
-          zIndex: 1,
-          maxWidth: "1400px",
-          margin: "0 auto",
-          padding: "0 20px",
-        }}
-      >
+      <div className="home-content">
         {/* Hero Section */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "center",
-            justifyContent: "center",
-            padding: "60px 20px",
-            gap: "40px",
-            // Added flexWrap for responsiveness on smaller screens
-            flexWrap: "wrap",
-          }}
+          className="home-hero"
         >
           {/* Left: Text Content */}
-          <div style={{ flex: 1, maxWidth: "600px", minWidth: "300px" }}>
+          <div className="home-hero-text">
             <motion.h1
               initial={{ x: -50, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.3, duration: 0.8 }}
-              style={{
-                fontSize: "clamp(2.5rem, 6vw, 5rem)",
-                fontWeight: "900",
-                marginBottom: "24px",
-                background:
-                  "linear-gradient(135deg, #10b981, #06b6d4, #8b5cf6)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-                lineHeight: 1.1,
-              }}
+              className="home-hero-title"
             >
               Connect, Reduce, Impact
             </motion.h1>
@@ -304,97 +234,45 @@ const Home = () => {
               initial={{ x: -50, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.8 }}
-              style={{
-                fontSize: "clamp(1.5rem, 3vw, 2rem)",
-                fontWeight: "600",
-                marginBottom: "24px",
-                color: "#10b981",
-                minHeight: "60px",
-                display: "flex",
-                alignItems: "center",
-              }}
+              className="home-hero-typewriter"
             >
-              {/* Changed currentText to typewriterText to match variable name */}
               {typewriterText}
-              <span style={{ opacity: 0.5 }}>|</span>
+              <span className="home-hero-typewriter-cursor">|</span>
             </motion.div>
 
             <motion.p
               initial={{ x: -50, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.7, duration: 0.8 }}
-              style={{
-                fontSize: "clamp(1rem, 2vw, 1.25rem)",
-                color: "rgba(255,255,255,0.7)",
-                lineHeight: "1.8",
-                marginBottom: "40px",
-              }}
+              className="home-hero-description"
             >
               Join FoodSaver, the platform that connects restaurants with NGOs to minimize food waste and feed those in need. Together, we can make a difference.
             </motion.p>
 
-            {/* Fixed CTA button: 
-              - Wrapped the motion.button in the <Link> component.
-              - Removed the stray/duplicate <Link> and extra </div> tags that were breaking the JSX.
-            */}
             <Link to="/registration" style={{ textDecoration: 'none' }}>
               <motion.button
                 initial={{ x: -50, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ delay: 0.9, duration: 0.8 }}
-                whileHover={{
-                  scale: 1.05,
-                  boxShadow: "0 20px 60px rgba(16, 185, 129, 0.5)",
-                }}
+                whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                style={{
-                  padding: "20px 48px",
-                  background:
-                    "linear-gradient(135deg, #10b981, #059669)",
-                  color: "white",
-                  fontWeight: "700",
-                  fontSize: "1.25rem",
-                  borderRadius: "50px",
-                  border: "none",
-                  cursor: "pointer",
-                  boxShadow: "0 10px 40px rgba(16,185,129,0.4)",
-                }}
+                className="home-hero-cta"
               >
                 Get Started
               </motion.button>
             </Link>
           </div>
-          {/* Removed stray <Link> and </div> tags from here.
-            The hero section now correctly contains two children: 
-            1. The text content div (above)
-            2. The image motion.div (below)
-          */}
 
           {/* Right: Image Content */}
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 0.5, duration: 1 }}
-            style={{
-              flex: 1,
-              maxWidth: "600px",
-              minWidth: "300px",
-              width: "100%",
-              height: "auto",
-              borderRadius: "16px",
-              overflow: "hidden",
-              boxShadow: "0 20px 60px rgba(0,0,0,0.5)",
-            }}
+            className="home-hero-image"
           >
             <img
               src="https://thumbs.dreamstime.com/b/homeless-beggars-street-allahabad-india-poor-indian-woman-children-begging-food-streets-uttar-pradesh-74305275.jpg"
               alt="People in need"
-              style={{
-                width: "100%",
-                height: "auto",
-                display: "block",
-                objectFit: "cover",
-              }}
             />
           </motion.div>
         </motion.div>
@@ -404,16 +282,9 @@ const Home = () => {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          // Added onViewportEnter to trigger the countStart state
           onViewportEnter={() => setCountStart(true)}
           transition={{ duration: 0.8 }}
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-            gap: "32px",
-            marginBottom: "120px",
-            padding: "40px 0",
-          }}
+          className="home-stats"
         >
           {statsData.map((stat, index) => (
             <motion.div
@@ -423,69 +294,24 @@ const Home = () => {
               transition={{ duration: 0.6, delay: index * 0.15 }}
               whileHover={{ y: -10, scale: 1.03 }}
               viewport={{ once: true }}
-              style={{
-                position: "relative",
-                padding: "40px",
-                background: "rgba(255, 255, 255, 0.03)",
-                backdropFilter: "blur(20px)",
-                border: "1px solid rgba(255, 255, 255, 0.08)",
-                borderRadius: "24px",
-                textAlign: "center",
-                overflow: "hidden",
-              }}
+              className="home-stat-card"
             >
-              <div
-                style={{
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  right: 0,
-                  height: "4px",
-                  // Fixed gradient logic to work with the placeholder colors
-                  background: `linear-gradient(to right, ${stat.color
-                    .replace("from-", "")
-                    .replace("to-", "")
-                    .split(" ")
-                    .join(", ")})`,
-                }}
-              />
+              <div className="home-stat-card-top" />
 
               <motion.div
                 animate={{ rotate: [0, 10, -10, 0] }}
                 transition={{ duration: 3, repeat: Infinity }}
-                style={{ fontSize: "4rem", marginBottom: "16px" }}
+                className="home-stat-icon"
               >
                 {stat.icon}
               </motion.div>
 
-              <div
-                style={{
-                  fontSize: "3rem",
-                  fontWeight: "900",
-                  // Fixed gradient logic
-                  background: `linear-gradient(135deg, ${stat.color
-                    .replace("from-", "")
-                    .replace("to-", "")
-                    .split(" ")
-                    .join(", ")})`,
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  backgroundClip: "text",
-                  marginBottom: "8px",
-                }}
-              >
-                {/* Replaced <CountUp> with <SimpleCountUp> and passed startAnimation prop */}
+              <div className="home-stat-value">
                 {countStart && <SimpleCountUp end={stat.value} duration={2} startAnimation={countStart} />}
                 {stat.unit}
               </div>
 
-              <div
-                style={{
-                  fontSize: "1.125rem",
-                  color: "rgba(255, 255, 255, 0.7)",
-                  fontWeight: "600",
-                }}
-              >
+              <div className="home-stat-label">
                 {stat.label}
               </div>
             </motion.div>
@@ -493,91 +319,34 @@ const Home = () => {
         </motion.div>
       </div>
 
-      {/* Testimonials Section - Fixed with inline styles for visibility */}
+      {/* Testimonials Section */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        style={{
-          position: "relative",
-          zIndex: 1,
-          maxWidth: "1400px",
-          margin: "0 auto",
-          padding: "60px 20px",
-        }}
+        className="home-testimonials"
       >
-        <h2 
-          style={{
-            fontSize: "2.5rem",
-            fontWeight: "700",
-            color: "white",
-            marginBottom: "40px",
-            textAlign: "center",
-            background: "linear-gradient(135deg, #10b981, #06b6d4)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-            backgroundClip: "text",
-          }}
-        >
-          Testimonials
-        </h2>
-        <div 
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-            gap: "32px",
-            padding: "20px 0",
-          }}
-        >
+        <h2 className="home-testimonials-title">Testimonials</h2>
+        <div className="home-testimonials-grid">
           {testimonialsData.map((testimonial, index) => (
-            <motion.div 
+            <motion.div
               key={index}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               whileHover={{ y: -10 }}
               viewport={{ once: true }}
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                gap: "20px",
-                padding: "32px",
-                background: "rgba(255, 255, 255, 0.05)",
-                backdropFilter: "blur(20px)",
-                border: "1px solid rgba(255, 255, 255, 0.1)",
-                borderRadius: "16px",
-              }}
+              className="home-testimonial-card"
             >
-              <div 
-                className={testimonial.imageClass}
-                style={{
-                  width: "80px",
-                  height: "80px",
-                  borderRadius: "50%",
-                  border: "3px solid #10b981",
-                }}
+              <div
+                className={`home-testimonial-avatar ${testimonial.imageClass}`}
               ></div>
               <div>
-                <p 
-                  style={{
-                    fontSize: "1.125rem",
-                    fontWeight: "500",
-                    color: "rgba(255, 255, 255, 0.9)",
-                    lineHeight: "1.6",
-                    marginBottom: "16px",
-                    fontStyle: "italic",
-                  }}
-                >
+                <p className="home-testimonial-quote">
                   {testimonial.quote}
                 </p>
-                <p 
-                  style={{
-                    fontSize: "1rem",
-                    fontWeight: "600",
-                    color: "#10b981",
-                  }}
-                >
+                <p className="home-testimonial-author">
                   {testimonial.author}
                 </p>
               </div>
@@ -586,66 +355,29 @@ const Home = () => {
         </div>
       </motion.div>
 
-      {/* Final CTA Section - Fixed with inline styles for visibility */}
+      {/* Final CTA Section */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        style={{
-          position: "relative",
-          zIndex: 1,
-          maxWidth: "1400px",
-          margin: "0 auto",
-          padding: "80px 20px",
-          textAlign: "center",
-        }}
+        className="home-final-cta"
       >
         <motion.div
           initial={{ scale: 0.9 }}
           whileInView={{ scale: 1 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          style={{
-            padding: "60px 40px",
-            background: "rgba(16, 185, 129, 0.1)",
-            backdropFilter: "blur(20px)",
-            border: "2px solid rgba(16, 185, 129, 0.3)",
-            borderRadius: "24px",
-          }}
+          className="home-final-cta-card"
         >
-          <h1 
-            style={{
-              fontSize: "clamp(2rem, 5vw, 3.5rem)",
-              fontWeight: "900",
-              color: "white",
-              marginBottom: "32px",
-              background: "linear-gradient(135deg, #10b981, #06b6d4)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
-            }}
-          >
+          <h1 className="home-final-cta-title">
             Ready to Make a Difference?
           </h1>
           <Link to="/registration" style={{ textDecoration: 'none' }}>
             <motion.button
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0 20px 60px rgba(16, 185, 129, 0.5)",
-              }}
+              whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              style={{
-                padding: "20px 48px",
-                background: "linear-gradient(135deg, #10b981, #059669)",
-                color: "white",
-                fontWeight: "700",
-                fontSize: "1.25rem",
-                borderRadius: "50px",
-                border: "none",
-                cursor: "pointer",
-                boxShadow: "0 10px 40px rgba(16,185,129,0.4)",
-              }}
+              className="home-final-cta-button"
             >
               Get Started
             </motion.button>
