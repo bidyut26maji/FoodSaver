@@ -19,6 +19,8 @@ import Contributors from './pages/Contributors';
 import Contribute from './pages/Contribute';
 import Support from './pages/Support';
 import Team from './pages/Team';
+import Privacy from './pages/Privacy';
+import Terms from './pages/Terms';
 import './App.css';
 
 function App() {
@@ -43,6 +45,8 @@ function App() {
             <Route path="/contribute" element={<Contribute />} />
             <Route path="/support" element={<Support />} />
             <Route path="/team" element={<Team />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/terms" element={<Terms />} />
           </Routes>
         </main>
         <Footer />
