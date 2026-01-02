@@ -1,12 +1,12 @@
 import React from 'react';
-import '../css/Contribute.css'; // Make sure this path is correct
-import { 
-  FaLeaf, 
-  FaHeart, 
-  FaHandsHelping, 
-  FaUsers, 
-  FaCode, 
-  FaCheckCircle 
+import './Contribute.css'; // Make sure this path is correct
+import {
+  FaLeaf,
+  FaHeart,
+  FaHandsHelping,
+  FaUsers,
+  FaCode,
+  FaCheckCircle
 } from 'react-icons/fa';
 import { Link } from 'react-router-dom'; // 1. Import Link
 
@@ -14,7 +14,7 @@ const Contribute = () => {
   return (
     <div className="contribute-wrapper">
       <div className="contribute-container">
-        
+
         {/* --- Header Section --- */}
         <header className="contribute-header">
           <h1>
@@ -35,23 +35,23 @@ const Contribute = () => {
             and make a tangible difference in your community.
           </p>
           <div className="button-group">
-            
+
             <Link to="/donate" className="btn btn-donate">
               <FaHeart /> Donate
             </Link>
-            
+
             <Link to="/support" className="btn btn-support">
               <FaHandsHelping /> Support
             </Link>
-            
+
             <Link to="/team" className="btn btn-team">
               <FaUsers /> Team
             </Link>
-            
+
             <Link to="/contributors" className="btn btn-open-source">
               <FaCode /> Open Source
             </Link>
-            
+
           </div>
         </section>
 
@@ -65,12 +65,12 @@ const Contribute = () => {
             </p>
           </div>
           <div className="cta-button-container">
-            
+
             {/* 4. Changed <button> to <Link> here as well */}
             <Link to="/verify" className="btn btn-verify">
               <FaCheckCircle /> Get Verified Now
             </Link>
-            
+
           </div>
         </section>
 

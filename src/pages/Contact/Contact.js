@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Faq from '../components/Faq';
+import Faq from '../../components/Faq/Faq';
 import './Contact.css';
 
 const Contact = () => {
@@ -24,7 +24,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     setTimeout(() => {
       setIsSubmitting(false);
@@ -51,7 +51,7 @@ const Contact = () => {
       {/* Contact Information Cards */}
       <div className="contact-info-section">
         <h2 className="contact-info-title">Get in Touch</h2>
-        
+
         <div className="contact-cards-container">
           {/* Email Card */}
           <div className="contact-card">

@@ -1,7 +1,7 @@
 // src/pages/RestaurantDashboard.js
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import '../css/RestaurantDashboard.css';
+import './RestaurantDashboard.css';
 
 const RestaurantDashboard = () => {
   // === STATE ===
@@ -73,7 +73,7 @@ const RestaurantDashboard = () => {
   };
 
   const toggleOrderStatus = (id) => {
-    setOrders(orders.map(order => 
+    setOrders(orders.map(order =>
       order.id === id ? { ...order, status: order.status === 'pending' ? 'completed' : 'pending' } : order
     ));
     saveData();
@@ -141,7 +141,7 @@ const RestaurantDashboard = () => {
   };
 
   const toggleMenuItemAvailability = (id) => {
-    setMenuItems(menuItems.map(item => 
+    setMenuItems(menuItems.map(item =>
       item.id === id ? { ...item, available: !item.available } : item
     ));
     saveData();
@@ -228,27 +228,27 @@ const RestaurantDashboard = () => {
 
       {/* KPI Cards */}
       <div className="kpi-grid">
-        <KPICard 
-          title="Total Orders" 
-          value={totalOrders} 
+        <KPICard
+          title="Total Orders"
+          value={totalOrders}
           subtitle="All-time orders"
           icon="📦"
         />
-        <KPICard 
-          title="Pending Orders" 
-          value={pendingOrders} 
+        <KPICard
+          title="Pending Orders"
+          value={pendingOrders}
           subtitle="Awaiting fulfillment"
           icon="⏳"
         />
-        <KPICard 
-          title="Revenue" 
-          value={`₹${revenue.toLocaleString()}`} 
+        <KPICard
+          title="Revenue"
+          value={`₹${revenue.toLocaleString()}`}
           subtitle="Food value donated"
           icon="💰"
         />
-        <KPICard 
-          title="Menu Items" 
-          value={menuCount} 
+        <KPICard
+          title="Menu Items"
+          value={menuCount}
           subtitle="Available for donation"
           icon="🍽️"
         />
@@ -297,14 +297,14 @@ const RestaurantDashboard = () => {
                         </td>
                         <td>{new Date(order.date).toLocaleDateString()}</td>
                         <td className="action-cell">
-                          <button 
+                          <button
                             onClick={() => toggleOrderStatus(order.id)}
                             className={`btn-icon ${order.status === 'pending' ? 'btn-success' : 'btn-warning'}`}
                             title={order.status === 'pending' ? 'Mark as complete' : 'Undo completion'}
                           >
                             {order.status === 'pending' ? '✓' : '↩'}
                           </button>
-                          <button 
+                          <button
                             onClick={() => deleteOrder(order.id)}
                             className="btn-icon btn-danger"
                             title="Delete order"
@@ -333,9 +333,9 @@ const RestaurantDashboard = () => {
                 const chartColors = getChartColors();
                 return (
                   <div key={i} className="chart-bar">
-                    <div 
+                    <div
                       className="bar"
-                      style={{ 
+                      style={{
                         height: `${(item.value / maxSale) * 100}%`,
                         backgroundColor: item.value > 0 ? chartColors.active : chartColors.inactive
                       }}
@@ -428,21 +428,21 @@ const RestaurantDashboard = () => {
                           {item.available ? '✓ Available' : '✗ Unavailable'}
                         </span>
                       </div>
-                      <button 
+                      <button
                         onClick={() => toggleMenuItemAvailability(item.id)}
                         className="btn-icon"
                         title="Toggle availability"
                       >
                         {item.available ? '✓' : '✕'}
                       </button>
-                      <button 
+                      <button
                         onClick={() => editMenuItem(item.id)}
                         className="btn-icon"
                         title="Edit item"
                       >
                         ✏
                       </button>
-                      <button 
+                      <button
                         onClick={() => deleteMenuItem(item.id)}
                         className="btn-icon btn-danger"
                         title="Delete item"

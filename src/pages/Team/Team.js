@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/Team.css';
+import './Team.css';
 
 // --- Optional Styles Component (Prevents Build Errors) ---
 const TeamStyles = () => null;
