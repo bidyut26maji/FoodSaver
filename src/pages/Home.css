@@ -311,11 +311,11 @@
   .home-hero {
     flex-direction: column;
   }
-  
+
   .home-stats {
     grid-template-columns: 1fr;
   }
-  
+
   .home-testimonials-grid {
     grid-template-columns: 1fr;
   }

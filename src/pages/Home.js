@@ -162,14 +162,36 @@ const Home = () => {
 
   const testimonialsData = [
     {
-      quote: '"FoodSaver has made it incredibly easy for us to donate our surplus food. It\'s a win-win!"',
-      author: '- Sarah Chen, Restaurant Owner',
+      quote: 'FoodSaver has made it incredibly easy for us to donate our surplus food. The platform is intuitive, and knowing our food helps those in need gives us immense satisfaction. It\'s truly a win-win!',
+      author: 'Sarah Chen',
+      role: 'Restaurant Owner',
+      company: 'Golden Wok Restaurant',
+      rating: 5,
       imageClass: 'testimonial-image-1'
     },
     {
-      quote: '"Thanks to FoodSaver, we\'ve been ableto provide more meals to those in need. It\'s a fantastic initiative."',
-      author: '- David Lee, NGO Coordinator',
+      quote: 'Thanks to FoodSaver, we\'ve been able to provide more meals to those in need. The coordination is seamless, and the impact is measurable. It\'s a fantastic initiative that we\'re proud to be part of.',
+      author: 'David Lee',
+      role: 'NGO Coordinator',
+      company: 'Hope Foundation',
+      rating: 5,
       imageClass: 'testimonial-image-2'
+    },
+    {
+      quote: 'As a small café owner, I was worried about food waste. FoodSaver connected us with local charities effortlessly. The process is simple, and the team is incredibly supportive.',
+      author: 'Maria Rodriguez',
+      role: 'Café Owner',
+      company: 'Sunrise Café',
+      rating: 5,
+      imageClass: 'testimonial-image-3'
+    },
+    {
+      quote: 'This platform has revolutionized how we handle food distribution. We can now reach more people and reduce waste simultaneously. Highly recommended for any organization!',
+      author: 'James Wilson',
+      role: 'Operations Manager',
+      company: 'Community Care Network',
+      rating: 5,
+      imageClass: 'testimonial-image-4'
     }
   ];
 
@@ -327,28 +349,74 @@ const Home = () => {
         transition={{ duration: 0.8 }}
         className="home-testimonials"
       >
-        <h2 className="home-testimonials-title">Testimonials</h2>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="home-testimonials-header"
+        >
+          <h2 className="home-testimonials-title">What Our Community Says</h2>
+          <p className="home-testimonials-subtitle">
+            Real stories from restaurants and NGOs making a difference together
+          </p>
+        </motion.div>
+
         <div className="home-testimonials-grid">
           {testimonialsData.map((testimonial, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              whileHover={{ y: -10 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              whileHover={{ y: -10, scale: 1.02 }}
               viewport={{ once: true }}
               className="home-testimonial-card"
             >
-              <div
-                className={`home-testimonial-avatar ${testimonial.imageClass}`}
-              ></div>
-              <div>
-                <p className="home-testimonial-quote">
-                  {testimonial.quote}
-                </p>
-                <p className="home-testimonial-author">
-                  {testimonial.author}
-                </p>
+              {/* Quote Icon */}
+              <div className="home-testimonial-quote-icon">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10 20C10 15.5817 13.5817 12 18 12V8C11.3726 8 6 13.3726 6 20H10ZM18 12C22.4183 12 26 15.5817 26 20H30C30 13.3726 24.6274 8 18 8V12ZM26 20C26 24.4183 22.4183 28 18 28V32C24.6274 32 30 26.6274 30 20H26ZM18 28C13.5817 28 10 24.4183 10 20H6C6 26.6274 11.3726 32 18 32V28Z" fill="currentColor" opacity="0.2" />
+                </svg>
+              </div>
+
+              {/* Star Rating */}
+              <div className="home-testimonial-rating">
+                {[...Array(testimonial.rating)].map((_, i) => (
+                  <motion.span
+                    key={i}
+                    initial={{ opacity: 0, scale: 0 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ delay: index * 0.1 + i * 0.05 }}
+                    viewport={{ once: true }}
+                    className="home-testimonial-star"
+                  >
+                    ★
+                  </motion.span>
+                ))}
+              </div>
+
+              {/* Quote Text */}
+              <p className="home-testimonial-quote">
+                "{testimonial.quote}"
+              </p>
+
+              {/* Author Info */}
+              <div className="home-testimonial-author-section">
+                <div
+                  className={`home-testimonial-avatar ${testimonial.imageClass}`}
+                ></div>
+                <div className="home-testimonial-author-info">
+                  <p className="home-testimonial-author-name">
+                    {testimonial.author}
+                  </p>
+                  <p className="home-testimonial-author-role">
+                    {testimonial.role}
+                  </p>
+                  <p className="home-testimonial-author-company">
+                    {testimonial.company}
+                  </p>
+                </div>
               </div>
             </motion.div>
           ))}
