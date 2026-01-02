@@ -10,7 +10,11 @@ const Footer = () => {
         <div className="footer-container">
 
           {/* About Section */}
-          <div className="footer-column">
+          <div className="footer-column branding-section">
+            <div className="footer-logo-container">
+              <img src="/Food-Saver logo.png" alt="FoodSaver Logo" className="footer-main-logo" />
+              <span className="footer-logo-text">FoodSaver</span>
+            </div>
             <h3 className="footer-title">About FoodSaver</h3>
             <p className="footer-text">
               FoodSaver connects restaurants with NGOs to reduce food waste and feed those in need.
@@ -51,15 +55,15 @@ const Footer = () => {
           <div className="footer-column">
             <h3 className="footer-title">Our Partners</h3>
             <div className="footer-logos">
-              <img 
-                src="/images/WEST-BENGAL-GOVERNMENT.webp" 
-                alt="Government of West Bengal" 
-                className="footer-logo" 
+              <img
+                src="/images/WEST-BENGAL-GOVERNMENT.webp"
+                alt="Government of West Bengal"
+                className="footer-logo"
               />
-              <img 
-                src="/images/HIT-Haldia-Logo.webp" 
-                alt="HIT Haldia" 
-                className="footer-logo" 
+              <img
+                src="/images/HIT-Haldia-Logo.webp"
+                alt="HIT Haldia"
+                className="footer-logo"
               />
             </div>
           </div>
