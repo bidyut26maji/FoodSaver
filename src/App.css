@@ -80,28 +80,38 @@ body {
   position: relative;
 }
 
-.logo-group {
+.logo-link {
   display: flex;
   align-items: center;
   gap: 12px;
+  text-decoration: none;
   z-index: 1001;
+  transition: transform 0.3s ease;
+}
+
+.logo-link:hover {
+  transform: translateY(-1px);
 }
 
 .logo-icon {
-  width: 32px;
-  height: 32px;
-  color: var(--color-primary);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  filter: drop-shadow(0 0 8px rgba(56, 224, 123, 0.4));
+  /* filter: drop-shadow(0 0 8px rgba(56, 224, 123, 0.4)); */
 }
 
-.logo-icon:hover {
-  transform: rotate(360deg) scale(1.1);
-  filter: drop-shadow(0 0 12px rgba(56, 224, 123, 0.6));
+.logo-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
 }
 
-.logo-group:hover .logo-icon {
-  transform: rotate(360deg) scale(1.1);
+.logo-link:hover .logo-icon {
+  transform: scale(1.1);
 }
 
 .logo-text {
@@ -114,14 +124,6 @@ body {
   margin: 0;
   letter-spacing: -0.02em;
   transition: all 0.3s ease;
-}
-
-.logo-group {
-  transition: transform 0.3s ease;
-}
-
-.logo-group:hover {
-  transform: translateY(-1px);
 }
 
 
@@ -1236,4 +1238,36 @@ html {
 .newsletter-btn:hover {
   background: var(--color-primary-hover);
   transform: translateY(-2px);
+}
+
+/* Footer Logo Styles */
+.footer-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.footer-main-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 50%;
+  filter: drop-shadow(0 0 5px rgba(56, 224, 123, 0.2));
+}
+
+.footer-logo-text {
+  font-size: 1.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--color-primary), var(--text-tertiary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.02em;
+}
+
+@media (max-width: 768px) {
+  .footer-logo-container {
+    justify-content: center;
+  }
 }
