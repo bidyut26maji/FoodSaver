@@ -64,25 +64,41 @@ const Header = () => {
           <Link className={`nav-link ${isActive('/works')}`} to="/works">
             How it Works
           </Link>
-          
+
           {/* Dropdown Menu */}
-          <div className="dropdown" onMouseEnter={toggleDropdown} onMouseLeave={toggleDropdown}>
-            <button className="dropdown-toggle" aria-expanded={isDropdownOpen}>
+          <div
+            className="dropdown"
+            onMouseEnter={() => setIsDropdownOpen(true)}
+            onMouseLeave={() => setIsDropdownOpen(false)}
+          >
+            <button
+              className={`dropdown-toggle ${isDropdownOpen ? 'active' : ''}`}
+              aria-expanded={isDropdownOpen}
+              onClick={toggleDropdown}
+            >
               Services
-              <svg className={`dropdown-arrow ${isDropdownOpen ? 'open' : ''}`} width="12" height="8" viewBox="0 0 12 8">
-                <path d="M1 1L6 6L11 1" stroke="currentColor" strokeWidth="2" fill="none"/>
+              <svg className={`dropdown-arrow ${isDropdownOpen ? 'open' : ''}`} width="12" height="8" viewBox="0 0 12 8" fill="none">
+                <path d="M1 1L6 6L11 1" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </button>
             <div className={`dropdown-menu ${isDropdownOpen ? 'open' : ''}`}>
-              <Link className={`dropdown-item ${isActive('/restaurant')}`} to="/restaurant">
+              <Link
+                className={`dropdown-item ${isActive('/restaurant')}`}
+                to="/restaurant"
+                onClick={() => setIsDropdownOpen(false)}
+              >
                 For Restaurants
               </Link>
-              <Link className={`dropdown-item ${isActive('/ngo')}`} to="/ngo">
+              <Link
+                className={`dropdown-item ${isActive('/ngo')}`}
+                to="/ngo"
+                onClick={() => setIsDropdownOpen(false)}
+              >
                 For NGOs
               </Link>
             </div>
           </div>
-          
+
           <Link className={`nav-link ${isActive('/contact')}`} to="/contact">
             Contact
           </Link>
@@ -97,7 +113,7 @@ const Header = () => {
         </Link>
 
         {/* Mobile Hamburger */}
-        <button 
+        <button
           className={`hamburger ${isMenuOpen ? 'open' : ''}`}
           onClick={toggleMenu}
           aria-label="Toggle navigation menu"
@@ -126,12 +142,12 @@ const Header = () => {
         <Link className={`mobile-nav-link ${isActive('/contact')}`} to="/contact">
           Contact
         </Link>
-        
+
         {/* Theme Toggle in Mobile Menu */}
         <div style={{ display: 'flex', justifyContent: 'center', padding: '8px 0' }}>
           <ThemeToggle />
         </div>
-        
+
         <Link to="/registration" className="mobile-cta-button">
           Get Started
         </Link>
