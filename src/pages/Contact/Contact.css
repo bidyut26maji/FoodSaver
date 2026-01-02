@@ -5,8 +5,8 @@
   position: relative;
   padding: 120px 20px 80px;
   text-align: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),
-    url('../../assets/images/contact-hero.png');
+  background-image: linear-gradient(var(--bg-overlay), var(--bg-overlay)),
+    url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?q=80&w=2074');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
