@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 // --- Import the new CSS file ---
-import '../css/Contributors.css'; 
+import './Contributors.css';
 // --- Import the new Modal component ---
-import ContributorModal from './ContributorModal'; 
+import ContributorModal from './ContributorModal';
 
 // --- Define your repo details ---
 const REPO_OWNER = 'bidyut26maji';
@@ -22,13 +22,13 @@ const Contributors = () => {
   const [sortBy, setSortBy] = useState('contributions');
   const [filterLevel, setFilterLevel] = useState('all');
   const [currentPage, setCurrentPage] = useState(1);
-  
+
   const [contributors, setContributors] = useState([]);
   const [projectLead, setProjectLead] = useState(null); // State for the lead
   const [activity, setActivity] = useState([]); // State for timeline
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
-  
+
   // --- State for the modal ---
   const [selectedContributor, setSelectedContributor] = useState(null);
 
@@ -49,7 +49,7 @@ const Contributors = () => {
         if (!contribResponse.ok) throw new Error(`Fetch contributors failed: ${contribResponse.status}`);
         if (!pullsResponse.ok) throw new Error(`Fetch PRs failed: ${pullsResponse.status}`);
         if (!commitsResponse.ok) throw new Error(`Fetch commits failed: ${commitsResponse.status}`);
-        
+
         const contribData = await contribResponse.json();
         const pullsData = await pullsResponse.json();
         const commitsData = await commitsResponse.json();
@@ -182,7 +182,7 @@ const Contributors = () => {
           </div>
           <div className="contributor-container">
             <h1>🌟 GitHub Contributors Dashboard</h1>
-            
+
             {/* --- Stats Section from HTML --- */}
             <div id="stats">
               <div className="stat-box">
@@ -205,15 +205,15 @@ const Contributors = () => {
 
             {/* --- Controls Section from HTML --- */}
             <div className="search-contributor">
-              <input 
-                type="text" 
-                id="searchInput" 
+              <input
+                type="text"
+                id="searchInput"
                 placeholder="Search contributor..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
-              <select 
-                id="sortBy" 
+              <select
+                id="sortBy"
                 className="filter-select"
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
@@ -223,8 +223,8 @@ const Contributors = () => {
                 <option value="points">Most Points</option>
                 <option value="alphabetical">Alphabetical</option>
               </select>
-              <select 
-                id="filterLevel" 
+              <select
+                id="filterLevel"
                 className="filter-select"
                 value={filterLevel}
                 onChange={(e) => setFilterLevel(e.target.value)}
@@ -250,8 +250,8 @@ const Contributors = () => {
             {/* --- Project Lead Card from HTML --- */}
             {projectLead && (
               <div id="projectLeadContainer">
-                <div 
-                  className="contributor special-lead" 
+                <div
+                  className="contributor special-lead"
                   onClick={() => setSelectedContributor(projectLead)}
                 >
                   <img src={projectLead.avatar} alt={projectLead.name} />
@@ -314,9 +314,9 @@ const Contributors = () => {
       </main>
       {/* --- Render the modal if a contributor is selected --- */}
       {selectedContributor && (
-        <ContributorModal 
-          contributor={selectedContributor} 
-          onClose={() => setSelectedContributor(null)} 
+        <ContributorModal
+          contributor={selectedContributor}
+          onClose={() => setSelectedContributor(null)}
         />
       )}
     </div>

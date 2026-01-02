@@ -1,6 +1,6 @@
 import React from 'react';
-import RestaurantForm from '../components/RestaurantForm';
-import '../components/RestaurantForm.css';
+import RestaurantForm from '../../components/RestaurantForm/RestaurantForm';
+import '../../components/RestaurantForm/RestaurantForm.css';
 
 const RestaurantSubmission = () => {
   return (
