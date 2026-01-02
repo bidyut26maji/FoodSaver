@@ -99,6 +99,89 @@ const Contact = () => {
         </div>
       </div>
 
+      {/* Contact Form Section */}
+      <div className="contact-form-section">
+        <div className="contact-form-container">
+          <div className="contact-form-header">
+            <h2 className="contact-form-title">Send us a Message</h2>
+            <p className="contact-form-subtitle">Have a specific inquiry or just want to say hello? Fill out the form below.</p>
+          </div>
+
+          <form onSubmit={handleSubmit} className="contact-form">
+            <div className="form-grid">
+              <div className="form-group">
+                <label htmlFor="name" className="form-label">Full Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  placeholder="John Doe"
+                  required
+                  className="form-input"
+                />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="email" className="form-label">Email Address</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  placeholder="john@example.com"
+                  required
+                  className="form-input"
+                />
+              </div>
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="subject" className="form-label">Subject</label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                value={formData.subject}
+                onChange={handleInputChange}
+                placeholder="How can we help?"
+                required
+                className="form-input"
+              />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="message" className="form-label">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                value={formData.message}
+                onChange={handleInputChange}
+                placeholder="Your message here..."
+                required
+                rows="5"
+                className="form-input form-textarea"
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              className={`contact-submit-btn ${isSubmitting ? 'submitting' : ''}`}
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? (
+                <>
+                  <span className="spinner"></span>
+                  Sending...
+                </>
+              ) : 'Send Message'}
+            </button>
+          </form>
+        </div>
+      </div>
+
       {/* FAQ Section */}
       <div style={{ padding: '20px', background: 'var(--bg-primary)' }}>
         <Faq />
