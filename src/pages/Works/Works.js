@@ -64,11 +64,11 @@ const Works = () => {
             key={i}
             className="works-orb"
             initial={{ x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1000), y: Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 1000) }}
-            animate={{ 
+            animate={{
               x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1000),
               y: Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 1000),
             }}
-            transition={{ 
+            transition={{
               duration: Math.random() * 20 + 10,
               repeat: Infinity,
               repeatType: 'reverse'
@@ -79,7 +79,7 @@ const Works = () => {
 
       <div className="works-content-wrapper">
         {/* Back Button */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           className="works-back-button-wrapper"
@@ -101,7 +101,7 @@ const Works = () => {
         >
           <div className="works-hero-bg-image" />
           <div className="works-hero-bg-gradient" />
-          
+
           <motion.div
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -140,10 +140,10 @@ const Works = () => {
                 transition={{ type: 'spring', stiffness: 300 }}
                 className="works-step-card"
               >
-                
+
                 <div className="works-step-bg-gradient" />
 
-                
+
                 <motion.div
                   initial={{ scale: 0, rotate: -180 }}
                   whileInView={{ scale: 1, rotate: 0 }}
@@ -166,7 +166,7 @@ const Works = () => {
                   </p>
                 </div>
 
-                
+
                 {index < stepsData.length - 1 && (
                   <div className="works-step-connector" />
                 )}
@@ -209,7 +209,7 @@ const Works = () => {
                 className="works-benefit-card"
               >
                 <div className="works-benefit-card-top-bar" />
-                
+
                 <div className="works-benefit-header">
                   <div className="works-benefit-icon">
                     {benefit.icon}
@@ -248,7 +248,7 @@ const Works = () => {
           className="works-cta-section"
         >
           <div className="works-cta-bg-glow" />
-          
+
           <div className="works-cta-content">
             <h2 className="works-cta-title">
               Ready to Make an Impact?
@@ -258,21 +258,25 @@ const Works = () => {
             </p>
 
             <div className="works-cta-buttons-wrapper">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="works-btn-restaurant"
-              >
-                🏪 For Restaurants
-              </motion.button>
-              
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="works-btn-ngo"
-              >
-                🤲 For NGOs
-              </motion.button>
+              <Link to="/restaurant" className="works-cta-link">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="works-btn-restaurant"
+                >
+                  🏪 For Restaurants
+                </motion.button>
+              </Link>
+
+              <Link to="/ngo" className="works-cta-link">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="works-btn-ngo"
+                >
+                  🤲 For NGOs
+                </motion.button>
+              </Link>
             </div>
           </div>
         </motion.div>

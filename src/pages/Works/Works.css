@@ -802,9 +802,14 @@
 
 .works-cta-buttons-wrapper {
   display: flex;
-  gap: 16px;
+  gap: 24px;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+.works-cta-link {
+  text-decoration: none;
+  display: inline-block;
 }
 
 .works-btn-restaurant {
