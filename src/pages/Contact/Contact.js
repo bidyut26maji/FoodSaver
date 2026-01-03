@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 import Faq from '../../components/Faq/Faq';
 import './Contact.css';
 
 const Contact = () => {
+  // ... existing state and handlers ...
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -50,51 +52,75 @@ const Contact = () => {
 
       {/* Contact Information Cards */}
       <div className="contact-info-section">
-        <h2 className="contact-info-title">Get in Touch</h2>
+        <div className="section-header">
+          <h2 className="contact-info-title">Global Contact Hub</h2>
+          <p className="contact-info-desc">Reach out through any of our channels. Our team is here to support you.</p>
+        </div>
 
         <div className="contact-cards-container">
           {/* Email Card */}
           <div className="contact-card">
-            <div className="contact-icon-wrapper">📧</div>
-            <h3 className="contact-card-title">Email</h3>
-            <p className="contact-card-text">
-              <a href="mailto:info@foodsaver.com" className="contact-link">
-                info@foodsaver.com
-              </a>
-            </p>
+            <div className="card-glass-effect"></div>
+            <div className="contact-icon-wrapper">
+              <Mail className="contact-lucide-icon" />
+            </div>
+            <div className="contact-card-content">
+              <h3 className="contact-card-title">Email Us</h3>
+              <p className="contact-card-text">
+                <a href="mailto:info@foodsaver.com" className="contact-link">
+                  info@foodsaver.com
+                </a>
+              </p>
+              <p className="contact-card-subtext">24/7 Support for urgent queries</p>
+            </div>
           </div>
 
           {/* Phone Card */}
           <div className="contact-card">
-            <div className="contact-icon-wrapper">📞</div>
-            <h3 className="contact-card-title">Phone</h3>
-            <p className="contact-card-text">
-              <a href="tel:+1234567890" className="contact-link">
-                +1 (234) 567-8900
-              </a>
-            </p>
+            <div className="card-glass-effect"></div>
+            <div className="contact-icon-wrapper">
+              <Phone className="contact-lucide-icon" />
+            </div>
+            <div className="contact-card-content">
+              <h3 className="contact-card-title">Call Us</h3>
+              <p className="contact-card-text">
+                <a href="tel:+1234567890" className="contact-link">
+                  +1 (234) 567-8900
+                </a>
+              </p>
+              <p className="contact-card-subtext">Mon-Fri from 9am to 6pm</p>
+            </div>
           </div>
 
           {/* Address Card */}
           <div className="contact-card">
-            <div className="contact-icon-wrapper">📍</div>
-            <h3 className="contact-card-title">Address</h3>
-            <p className="contact-card-text">
-              Haldia Institute of Technology<br />
-              Haldia, West Bengal, India<br />
-              721657
-            </p>
+            <div className="card-glass-effect"></div>
+            <div className="contact-icon-wrapper">
+              <MapPin className="contact-lucide-icon" />
+            </div>
+            <div className="contact-card-content">
+              <h3 className="contact-card-title">Visit Us</h3>
+              <p className="contact-card-text">
+                HIT, Haldia, West Bengal<br />
+                India, 721657
+              </p>
+              <p className="contact-card-subtext">View on Google Maps</p>
+            </div>
           </div>
 
           {/* Business Hours Card */}
           <div className="contact-card">
-            <div className="contact-icon-wrapper">⏰</div>
-            <h3 className="contact-card-title">Business Hours</h3>
-            <p className="contact-card-text">
-              Monday - Friday: 9:00 AM - 6:00 PM<br />
-              Saturday: 10:00 AM - 4:00 PM<br />
-              Sunday: Closed
-            </p>
+            <div className="card-glass-effect"></div>
+            <div className="contact-icon-wrapper">
+              <Clock className="contact-lucide-icon" />
+            </div>
+            <div className="contact-card-content">
+              <h3 className="contact-card-title">Working Hours</h3>
+              <p className="contact-card-text">
+                Mon - Sat: 9:00 - 18:00
+              </p>
+              <p className="contact-card-subtext">Closed on Sundays & Holidays</p>
+            </div>
           </div>
         </div>
       </div>
