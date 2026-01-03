@@ -1,9 +1,24 @@
-/* ===============================
-   Privacy Policy Page Styles
-   (Merged + Optimized)
-================================ */
+.privacy-dropdown {
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
+    opacity: 0;
+}
 
-/* Page Wrapper */
+/* Active dropdown */
+.privacy-section.active .privacy-dropdown {
+    opacity: 1;
+}
+
+/* Section Hover / Active */
+.privacy-section {
+    cursor: pointer;
+}
+
+/* Prevent accidental text selection */
+.privacy-section-title {
+    user-select: none;
+}
+
 .privacy-page {
     overflow-x: hidden;
 }
