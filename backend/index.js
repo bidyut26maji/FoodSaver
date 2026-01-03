@@ -1,11 +1,26 @@
 const express = require("express");
 const cors = require("cors");
+const morgan = require("morgan");
+const mongoose = require("mongoose");
 require("dotenv").config();
 
 const app = express();
 
+/* ---------------- MIDDLEWARE ---------------- */
 app.use(cors());
 app.use(express.json());
+app.use(morgan("dev"));
+
+/* ---------------- DATABASE CONNECTION ---------------- */
+const mongoURI =
+  process.env.MONGO_URI || "mongodb://127.0.0.1:27017/foodsaver";
+
+mongoose
+  .connect(mongoURI)
+  .then(() => console.log("✅ MongoDB Connected"))
+  .catch((err) =>
+    console.error("❌ MongoDB Connection Error:", err.message)
+  );
 
 /* ---------------- RESPONSE FORMATTER ---------------- */
 app.use((req, res, next) => {
@@ -30,9 +45,18 @@ app.use((req, res, next) => {
   next();
 });
 
-/* ---------------- SAMPLE ROUTES ---------------- */
+/* ---------------- ROUTES ---------------- */
 app.get("/api/health", (req, res) => {
-  res.success({ uptime: process.uptime() }, "Backend is running");
+  res.success(
+    {
+      uptime: process.uptime(),
+      dbStatus:
+        mongoose.connection.readyState === 1
+          ? "Connected"
+          : "Disconnected",
+    },
+    "Backend is healthy"
+  );
 });
 
 app.get("/api/error", (req, res) => {
@@ -48,12 +72,14 @@ app.use((req, res) => {
 
 /* ---------------- CENTRAL ERROR HANDLER ---------------- */
 app.use((err, req, res, next) => {
-  console.error("❌ Error:", err.message);
+  console.error("❌ Global Error:", err.stack);
 
-  res.status(err.statusCode || 500).json({
+  const statusCode = err.statusCode || 500;
+
+  res.status(statusCode).json({
     status: "error",
     message:
-      err.statusCode === 500
+      statusCode === 500
         ? "Internal server error"
         : err.message,
     timestamp: new Date().toISOString(),
@@ -63,5 +89,5 @@ app.use((err, req, res, next) => {
 /* ---------------- START SERVER ---------------- */
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log(`🚀 Backend running on port ${PORT}`);
+  console.log(`🚀 Server running on http://localhost:${PORT}`);
 });
