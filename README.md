@@ -1,11 +1,72 @@
 ![Logo](https://raw.githubusercontent.com/janavipandole/Foodie/main/imgs/logo%20WOSC.svg)
 
-# FoodSaver - React Application
+<h1 align="center">FoodSaver - React Application</h1>
 
 A modern React application that connects restaurants with NGOs to reduce food waste and feed communities. This platform facilitates the donation of surplus food from restaurants to NGOs for distribution to those in need.
 
+<div align="center">
+
+## 📊 Project Statistics
+
+<table>
+  <tr>
+    <td align="center" width="14.28%">
+      <img src="https://img.icons8.com/fluency/96/star--v1.png" width="48px" alt="Stars"/><br/>
+      <strong>Stars</strong><br/>
+      <a href="https://github.com/bidyut26maji/FoodSaver/stargazers">
+        <img src="https://img.shields.io/github/stars/bidyut26maji/FoodSaver?style=flat-square&labelColor=343b41&color=yellow" alt="stars"/>
+      </a>
+    </td>
+    <td align="center" width="14.28%">
+      <img src="https://img.icons8.com/fluency/96/code-fork.png" width="48px" alt="Forks"/><br/>
+      <strong>Forks</strong><br/>
+      <a href="https://github.com/bidyut26maji/FoodSaver/network/members">
+        <img src="https://img.shields.io/github/forks/bidyut26maji/FoodSaver?style=flat-square&labelColor=343b41&color=blue" alt="forks"/>
+      </a>
+    </td>
+    <td align="center" width="14.28%">
+      <img src="https://img.icons8.com/fluency/96/error--v1.png" width="48px" alt="Issues"/><br/>
+      <strong>Issues</strong><br/>
+      <a href="https://github.com/bidyut26maji/FoodSaver/issues">
+        <img src="https://img.shields.io/github/issues/bidyut26maji/FoodSaver?style=flat-square&labelColor=343b41&color=red" alt="issues"/>
+      </a>
+    </td>
+    <td align="center" width="14.28%">
+      <img src="https://img.icons8.com/fluency/96/pull-request.png" width="48px" alt="Open PRs"/><br/>
+      <strong>Open PRs</strong><br/>
+      <a href="https://github.com/bidyut26maji/FoodSaver/pulls">
+        <img src="https://img.shields.io/github/issues-pr/bidyut26maji/FoodSaver?style=flat-square&labelColor=343b41&color=orange" alt="open PRs"/>
+      </a>
+    </td>
+    <td align="center" width="14.28%">
+      <img src="https://img.icons8.com/fluency/96/checkmark.png" width="48px" alt="Closed PRs"/><br/>
+      <strong>Closed PRs</strong><br/>
+      <a href="https://github.com/bidyut26maji/FoodSaver/pulls?q=is%3Apr+is%3Aclosed">
+        <img src="https://img.shields.io/github/issues-pr-closed/bidyut26maji/FoodSaver?style=flat-square&labelColor=343b41&color=green" alt="closed PRs"/>
+      </a>
+    </td>
+    <td align="center" width="14.28%">
+      <img src="https://img.icons8.com/fluency/96/language.png" width="48px" alt="Languages"/><br/>
+      <strong>Languages</strong><br/>
+      <img src="https://img.shields.io/github/languages/count/bidyut26maji/FoodSaver?style=flat-square&labelColor=343b41&color=blueviolet" alt="language count"/>
+    </td>
+    <td align="center" width="14.28%">
+      <img src="https://img.icons8.com/fluency/96/crowd.png" width="48px" alt="Contributors"/><br/>
+      <strong>Contributors</strong><br/>
+      <a href="https://github.com/bidyut26maji/FoodSaver/graphs/contributors">
+        <img src="https://img.shields.io/github/contributors/bidyut26maji/FoodSaver?style=flat-square&labelColor=343b41&color=purple" alt="contributors"/>
+      </a>
+    </td>
+  </tr>
+</table>
+
 <img src="https://github.com/Mayur-Pagote/README_Design_Kit/blob/730d340c8008758ac291ebc555f818f851feda0f/Assets/RGB%20Line%20Thick.gif" width="100%" />
 
+</div>
+<div align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=24&duration=3000&pause=1000&color=0000FF&center=true&vCenter=true&width=700&lines=Welcome+to+Open+Source+Contribution!🎉;Start+this+repo+now!;Fork+it+🚀;Contribute+to+it+🛠️;Commit+to+your+forked+repo+💾;Create+a+Pull+Request+without+conflicts+✅" alt="Typing SVG" />
+</div>
+<img src="https://github.com/Mayur-Pagote/README_Design_Kit/blob/730d340c8008758ac291ebc555f818f851feda0f/Assets/RGB%20Line%20Thick.gif" width="100%" />
 ## 📑 Table of Contents
 
 - [Project Vision & Impact](#project-vision--impact)
@@ -247,24 +308,27 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=90&section=header" width="100%"/>
 
-## Contributors
+## 👥 Contributors
+<a href="https://github.com/bidyut26maji/FoodSaver/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=bidyut26maji/FoodSaver"/>
+</a>
 
-<img src="https://contributors-img.web.app/image?repo=bidyut26maji/Foodie"/>
+<img src="https://github.com/Mayur-Pagote/README_Design_Kit/blob/730d340c8008758ac291ebc555f818f851feda0f/Assets/RGB%20Line%20Thick.gif" width="100%" />
 
-<img src="https://github.com/Mayur-Pagote/README_Design_Kit/blob/45123f007c79aa8d0c8d9b11b3ff72d6bf4744c7/Assets/Star%20Light%20Line.gif" width="100%">
+## ⭐ Stargazers
+<a href="https://github.com/bidyut26maji/FoodSaver/stargazers">
+  <img src="https://reporoster.com/stars/dark/bidyut26maji/FoodSaver"/>
+</a>
+<img src="https://github.com/Mayur-Pagote/README_Design_Kit/blob/730d340c8008758ac291ebc555f818f851feda0f/Assets/RGB%20Line%20Thick.gif" width="100%" />
 
-## Stargazers
-
-<img src="https://reporoster.com/stars/dark/bidyut26maji/Foodie"/>
-
-<img src="https://github.com/Mayur-Pagote/README_Design_Kit/blob/45123f007c79aa8d0c8d9b11b3ff72d6bf4744c7/Assets/Star%20Light%20Line.gif" width="100%">
-
-## Forkers
-
-<img src="https://reporoster.com/forks/dark/bidyut26maji/Foodie"/>
+## 🍴 Forkers
+<a href="https://github.com/bidyut26maji/FoodSaver/network/members">
+  <img src="https://reporoster.com/forks/dark/bidyut26maji/FoodSaver"/>
+</a>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient"/>
 
+<img src="https://github.com/Mayur-Pagote/README_Design_Kit/blob/730d340c8008758ac291ebc555f818f851feda0f/Assets/RGB%20Line%20Thick.gif" width="100%" />
 
 ## 🌟 Support the Project
 
@@ -276,6 +340,7 @@ If you found this helpful:
 > “Good food brings people together — so does open source.” 🍕💻
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=footer" width="100%"/>
 
+<img src="https://github.com/Mayur-Pagote/README_Design_Kit/blob/730d340c8008758ac291ebc555f818f851feda0f/Assets/RGB%20Line%20Thick.gif" width="100%" />
 
 ## 📞 Support
 
@@ -283,18 +348,31 @@ For support and questions:
 - Email: info@foodsaver.com
 - Phone: +1 (234) 567-8900
 - Address: Haldia Institute of Technology, Haldia, West Bengal, India
+- 
+- <img src="https://github.com/Mayur-Pagote/README_Design_Kit/blob/730d340c8008758ac291ebc555f818f851feda0f/Assets/RGB%20Line%20Thick.gif" width="100%" />
 
 ## 🙏 Acknowledgments
 
 - Haldia Institute of Technology for supporting this initiative
 - Government of West Bengal for their partnership
 - All the restaurants and NGOs who make this platform possible
+- 
+<img src="https://github.com/Mayur-Pagote/README_Design_Kit/blob/730d340c8008758ac291ebc555f818f851feda0f/Assets/RGB%20Line%20Thick.gif" width="100%" />
+
+<div align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=24&duration=3000&pause=1000&color=00C853&center=true&vCenter=true&width=700&lines=Thanks+for+visiting+FoodSaver!+🙌;Start+the+repo+✅;Share+it+with+others+🌍;Contribute+and+grow+🛠️;Happy+Coding+✨!" alt="Thanks Banner Typing SVG" />
+</div>
+
+<img src="https://github.com/Mayur-Pagote/README_Design_Kit/blob/730d340c8008758ac291ebc555f818f851feda0f/Assets/RGB%20Line%20Thick.gif" width="100%" />
 
 
 ## Contributing
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to contribute to FoodSaver.
 
----
+<img src="https://github.com/Mayur-Pagote/README_Design_Kit/blob/730d340c8008758ac291ebc555f818f851feda0f/Assets/RGB%20Line%20Thick.gif" width="100%" />
 
-**Made with ❤️ for a better world**
+<h1 align="center">**Made with ❤️ for a better world**</h1>
+
+<img src="https://github.com/Mayur-Pagote/README_Design_Kit/blob/730d340c8008758ac291ebc555f818f851feda0f/Assets/RGB%20Line%20Thick.gif" width="100%" />
+

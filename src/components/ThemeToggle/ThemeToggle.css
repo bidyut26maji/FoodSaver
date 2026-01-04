@@ -1,0 +1,79 @@
+/* Theme Toggle Button Styles */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--border-default);
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-toggle:hover {
+  background-color: var(--bg-card-hover);
+  border-color: var(--color-primary);
+  transform: scale(1.05);
+}
+
+.theme-toggle:active {
+  transform: scale(0.95);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.theme-icon {
+  transition: all 0.3s ease;
+  color: var(--text-primary);
+}
+
+.theme-toggle:hover .theme-icon {
+  color: var(--color-primary);
+  transform: rotate(20deg);
+}
+
+/* Animation when theme changes */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.theme-toggle:active .theme-icon {
+  animation: rotate 0.5s ease;
+}
+
+/* Mobile Specific Styles */
+@media (max-width: 768px) {
+  .theme-toggle {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .theme-icon {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* Dark mode specific styling */
+:root .theme-toggle {
+  box-shadow: var(--shadow-md);
+}
+
+/* Light mode specific styling */
+[data-theme="light"] .theme-toggle {
+  box-shadow: var(--shadow-sm);
+}
