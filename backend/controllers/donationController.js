@@ -1,4 +1,6 @@
 const Donation = require('../models/Donation');
+const Order = require('../models/Order');
+const User = require('../models/User');
 
 exports.createDonation = async (req, res, next) => {
     try {
@@ -89,6 +91,80 @@ exports.updateDonation = async (req, res, next) => {
             message: 'Donation updated successfully',
             data: {
                 donation: updatedDonation,
+            },
+            timestamp: new Date().toISOString(),
+        });
+    } catch (err) {
+        next(err);
+    }
+};
+
+exports.getAvailableDonations = async (req, res, next) => {
+    try {
+        // Find all donations with status 'Available'
+        // In the future, we can add geo-spatial filtering here
+        const donations = await Donation.find({ status: 'Available' }).sort('-createdAt');
+
+        res.status(200).json({
+            status: 'success',
+            results: donations.length,
+            data: {
+                donations,
+            },
+            timestamp: new Date().toISOString(),
+        });
+    } catch (err) {
+        next(err);
+    }
+};
+
+exports.claimDonation = async (req, res, next) => {
+    try {
+        const user = await User.findById(req.user.id);
+
+        // Ensure only NGOs can claim
+        if (user.organizationType !== 'ngo') {
+            return res.status(403).json({
+                status: 'error',
+                message: 'Only NGOs are permitted to claim donations',
+            });
+        }
+
+        const donation = await Donation.findById(req.params.id);
+
+        if (!donation) {
+            return res.status(404).json({
+                status: 'error',
+                message: 'Donation not found',
+            });
+        }
+
+        if (donation.status !== 'Available') {
+            return res.status(400).json({
+                status: 'error',
+                message: `This donation is already ${donation.status.toLowerCase()}`,
+            });
+        }
+
+        // Update donation status
+        donation.status = 'Claimed';
+        await donation.save();
+
+        // Create an order
+        const order = await Order.create({
+            donationId: donation._id,
+            restaurantId: donation.donorId,
+            ngoId: req.user.id,
+            status: 'Pending',
+            claimedAt: Date.now(),
+        });
+
+        res.status(200).json({
+            status: 'success',
+            message: 'Donation claimed successfully',
+            data: {
+                donation,
+                order,
             },
             timestamp: new Date().toISOString(),
         });
