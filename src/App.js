@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import CursorGlow from "./components/CursorGlow/CursorGlow";
 
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
@@ -26,6 +27,7 @@ import './App.css';
 function App() {
   return (
     <Router>
+      <CursorGlow />
       <div className="App">
         <Header />
         <main className="main-content">

@@ -2,6 +2,11 @@
    THEME SYSTEM - CSS VARIABLES
    =============================================== */
 
+html,
+body {
+  cursor: default;
+}
+
 /* Dark Mode (Default) */
 :root {
   /* Brand Colors - Consistent across themes */
